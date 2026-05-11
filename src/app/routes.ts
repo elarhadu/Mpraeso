@@ -13,6 +13,8 @@ import { CommunityPage } from './pages/CommunityPage';
 import { DiasporaPage } from './pages/DiasporaPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { ContactPage } from './pages/ContactPage';
+import { GovernanceArchivePage } from './pages/GovernanceArchivePage';
+import { LocalGovernmentPage } from './pages/LocalGovernmentPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export const router = createBrowserRouter([
@@ -33,6 +35,8 @@ export const router = createBrowserRouter([
       { path: 'diaspora', Component: DiasporaPage },
       { path: 'gallery', Component: GalleryPage },
       { path: 'contact', Component: ContactPage },
+      { path: 'governance-archive', Component: GovernanceArchivePage },
+      { path: 'local-government', Component: LocalGovernmentPage },
       { path: '*', Component: NotFoundPage },
     ],
   },

@@ -26,12 +26,16 @@ const chiefProfiles: ChiefProfile[] = [
     enstooled: "23 October 1993",
     focus: "Unity, education, and long-term development",
     summary:
-      "Nana Ampadu Daaduam III is the Paramount Chief of Mpraeso and has guided the traditional area with a development-centered vision since 1993.",
+      "Nana Ampadu Daaduam III is the Paramount Chief of Mpraeso. A consummate lawyer and economist in private life, he has brought a lot of development to the Mpraeso community since his ascension to the Mpraeso throne in 1993. His education spanned from the Atibbie Methodist school, Achimota Secondary School in Accra, University of Hull for his Law Degree and the London School of Economics for his Masters Degree.",
     details: [
-      "Studied at Achimota Secondary School and later earned a First Class Law degree from the University of Hull in 1964.",
-      "Completed advanced studies at the London School of Economics and was called to the Bar in the UK in 1967.",
-      "Has prioritized peaceful dispute resolution and social harmony across the traditional area.",
-      "Championed educational and infrastructure development including TVET and kindergarten expansion.",
+      "In 1964, he graduated with a First Class Law Degree from the University of Hull becoming the first student in the history of the university to graduate with a First Class in Law. This prompted the President of Ghana at the time, Dr. Kwame Nkrumah to send a delegation to represent him at Nana's graduation ceremony in the UK and the BBC, recognising his achievement as a student also did a feature interview on him in 1964. Till date, there is a plague in the University of Hull recognising his academic credentials while he schooled there. In 1967, he was called to the bar in the UK.",
+      "Upon returning to Ghana in 1967, he had his law pupillage, worked for a couple of Law Chambers and then set-up his own Law Practice Firm in 1972. Apart from law practice, he has engaged in numerous ventures in private life including entrepreneurship and politics which saw him contesting for the Parliamentary seats of Mpraeso  and Nkawkaw between 1979 and 1992.",
+      "On the 23rd of October 1993, he was enstooled as the Paramount Chief of Mpraeso and has over the past 33 years dedicated himself to the service of the Mpraeso people as their Paramount chief.",
+      "His reign has seen to the resolution of the numerous chieftaincy disputes that plagued the town before his enstoolment as well as both infrastructural and cultural development of the Mpraeso community. Due to his dedication to the educational development of his people, he has spent his years on the throne pushing for educational infrastructure in Mpraeso. In this regard, apart from dedicating lands for a Technical and Vocational Education and Training (TVET) institute at Mpraeso, he has also allocated numerous plots of land for the construction of a University in Mpraeso. Indeed, one of his main aspirations currently is to see the completion of a university education facility in Mpraeso. Nana Ampadu Daadium III has also built a modern kindergarten for the children of Mpraeso to ensure that they get the strong academic foundation needed for their future educational exploits.",
+      "He has also seen to it that Mpraeso has access to necessary social amenities including but not limited to a Fire Station which the town lacked before his enstoolment.",
+      "Above all things, Nana sees the peaceful coexistence of the Mpraeso people despite individual differences as one of his crowning achievements. He is eternally proud of the Mpraeso people and respects their industriousness.",
+      "A firm believer in the abilities of women and the inclusion of women in critical traditional leadership, he broke the mold and for the first time in the history of Mpraeso elevated two females onto the Adonteng and the Benkum stools of Mpraeso. A decision he says he is very proud of.",
+      "His vision for the future of Mpraeso is for the Mpraeso people to, through their hard work and industriousness continue to ascend to the commanding heights of national and international socio-economic developments. He also wishes to see Mpraeso become the bastion of cultural tourism in Ghana.",
     ],
   },
   {
@@ -41,12 +45,14 @@ const chiefProfiles: ChiefProfile[] = [
     enstooled: "20 September 2020",
     focus: "Protection, elder welfare, and enterprise development",
     summary:
-      "Nana Krobea Asante is the first woman to occupy the Adonteng stool in Mpraeso, bringing entrepreneurial leadership and community advocacy.",
+      "Nana Krobea Asante, is the Adontenhene of Mpraeso. She is the first female to occupy the Adonteng stool which has historically been occupied by males. In private life, she is one of Ghana's most respected and industrious restaurateurs which has gained her both international and local recognitions including awards from the Ghana National Chamber of Commerce, and the World Culinary Awards among others.",
     details: [
-      "Interprets the Adonten role through its warrior tradition of courage and vigilance.",
-      "Promotes economic empowerment and inclusive leadership.",
-      "Advocates for stronger representation of women in traditional leadership.",
-      "Supports elder welfare and local business development initiatives.",
+      "She was enstooled as the Adontenghene of Mpraeso on the 20th of September, 2020 and has for the past almost six years played her role as a traditional with the same level of hard work, dedication and commitment to service that brought her success in private life.",
+      "For her, chieftaincy is not merely ceremonial but rooted in the warrior ethos of the Adonten position. Historically, the occupant of  Adonten stool is a warrior whose primary duty is to ensure the safety of the chief and the community in times of war and serves as the first line of defense. Tt is this sense of defence associated with her stool that undergirds how she carries on her duty as the Adontenghene.",
+      "Her leadership philosophy is grounded in humility, honesty, hard work, and fearlessness. She sees herself as a bridge between two lineages: her matrilineal side (Mpraeso, Asona clan) provides her with people and kinship, while her patrilineal side (Oyoko clan) provides wealth and blessings. This dual inheritance, she believes, has shaped her ability to lead with both strength and community focus.",
+      "Her excellent stewardship since her enstoolment further cemented the resolve of the Mpraeso hene and his elders to bring women into their fold as traditional leader a resolve which ultimately led to the enstoolment of another industrious female as the Benkumhene of Mpraeso.",
+      "Her vision for her role extends beyond tradition. She plans to establish an old people's home at Esubone, a proposal approved by the chief, and driven by her observation that the elderly are often abandoned or accused of witchcraft. She also advocates for business development in Kwahu, and sits on the 'All Business Advocacy' team, which welcomes investors to Mpraeso. Her leadership is thus a blend of ancestral duty, personal integrity, and forward-looking community service.",
+      "Ultimately, Nana Krobea Asante defines her role as a protector, a unifier, and a servant leader who remains unshaken by adversity, guided by God, and committed to uplifting both the aged and the next generation.",
     ],
   },
   {
@@ -56,12 +62,10 @@ const chiefProfiles: ChiefProfile[] = [
     enstooled: "18 January 2025",
     focus: "Coordination, administration, and institutional continuity",
     summary:
-      "As the first Nifahene of Mpraeso, he focuses on palace coordination, institutional structure, and efficient governance.",
+      "Chief Inspector Emmanuel Kwabena Obeng-Tetteh is the Nifahene of the Mpraeso community. A high achieving police officer, he currently works as a Public Prosecutor for the Ghana Police Service.",
     details: [
-      "Serves professionally as a Public Prosecutor with the Ghana Police Service.",
-      "Emphasizes discipline, structure, and accountability in leadership.",
-      "Focused on creating systems future Nifahene can build upon.",
-      "Strengthens communication and coordination among chiefs and elders.",
+      "Having been enstooled as the Nifahene on the 18th of January 2025, he has immersed himself into the traditional leadership of Mpraeso and has since been an active member of the place. He is the first person to be enstooled as the Nifahene of Mpraeso and he intends to carve a great legacy worthy of emulation for subsequent occupants of the stool.",
+      "He sees his role as the Nifahene to be akin to the Chief of Staff in the palace and hence he is at the centre of coordinating his fellow chiefs and elders to ensure that there is a smooth and efficient administration of traditional authority in Mpraeso.",
     ],
   },
   {
@@ -71,12 +75,19 @@ const chiefProfiles: ChiefProfile[] = [
     enstooled: "7 April 2025",
     focus: "Dispute resolution, inclusive governance, and education",
     summary:
-      "Nana Adwoa Obenewaa brings an inclusive and development-focused perspective to traditional leadership in Mpraeso.",
+      "Nana Adwoa Obenewaa is the Benkumhene of Mpraeso. Enstooled on the 7th of April 2025, she is one of two females currently occupying traditional stools in Mpraseo. Having had her education in Ghana, her professional life begun with a stint with the Heavy Equipment Department of the then Ghana National Trading Company (GNTC) before travelling to the United States of America where she excelled working as a Recordist in various companies.",
     details: [
-      "Advocates culturally grounded dispute resolution and social trust.",
-      "Supports participatory decision-making within the community.",
-      "Believes education is central to long-term development.",
-      "Promotes community-centered leadership and inclusive governance.",
+      "At heart, she always had a knack for entrepreneurship and thus, in collaboration with her mother, was engaged in one form of private business venture or another at all material times from her elementary school days through to her tertiary education days, and even while working with GNTC.",
+      "It was therefore not surprising that upon returning to Ghana from the United States, she ventured into full-blown entrepreneurship. Over the years, through grit, hard work and commitment, she has grown to become one of the leading entrepreneurs in Ghana, winning numerous awards and recognitions for her contributions to the economic development of Ghana.",
+      "As the Benkum hene of Mpraeso, she conceptualizes traditional leadership primarily as a community-centered governance system whose core mandate is to ensure peace, stability, and social transformation. Rather than viewing chieftaincy as an archaic or ceremonial institution, she frames it as a functional and adaptive system of local governance that continues to play a critical role in contemporary society.",
+      "A central theme in her perspective is the practical relevance of traditional leadership in dispute resolution and community cohesion. She has an acute appreciation of the extent to which individuals bring private and sensitive issues before traditional authorities for adjudication and has come to appreciate this as a strength of the chieftaincy institution, noting its efficiency and accessibility compared to formal legal systems.",
+      "As part of the traditional leaders of Mpraeso, she has been part of the prompt resolution of disputes, whether related to land, family, or interpersonal conflicts with all parties present, thereby fostering immediate reconciliation and sustaining communal harmony. This reinforces her view that traditional leadership is not only historically rooted but remains socially legitimate and operationally effective in modern contexts.",
+      "She perceives leadership as a responsibility to improve the community and leave it better than it was found. This ethos shapes her approach to chieftaincy, where she seeks to introduce innovation, shift mindsets, and contribute to long-term societal transformation. Her vision is not limited to maintaining tradition but extends to modernizing the institution in ways that add tangible value, particularly through education, which she identifies as the foundation of societal progress. For her, education is holistic, encompassing both formal schooling and moral upbringing and serves as a catalyst for improvements in health, decision-making, and overall community development .",
+      "As a traditional leader, she advocates for participatory leadership characterized by consultation, inclusiveness, and consensus-building. Rather than imposing authority, she prefers engaging community members in decision-making processes, valuing their input, and ensuring that they take ownership of outcomes. This reflects a shift from hierarchical authority to a more deliberative and collaborative model of traditional governance",
+      "While acknowledging that the chieftaincy institution is historically male-dominated, she does not perceive her position as a limitation. Instead, she adapts to the norms of the institution by respecting its traditions while confidently occupying her role. Her approach reflects a pragmatic balance between cultural continuity and evolving gender roles, suggesting that traditional leadership can accommodate inclusivity without losing its identity.",
+      "Furthermore, She views her role as one that demands integrity, self-discipline, and a strong sense of duty to the community. This sense of accountability extends beyond formal expectations to an internalized obligation to serve as a role model and steward of development.",
+      "For Nana Obenewaa, traditional leadership is a dynamic, relevant, and community-driven institution. It is not merely a relic of the past but a viable governance system capable of promoting justice, development, and social cohesion when guided by visionary, accountable, and participatory leadership.",
+      "Hence, she intends to use her role to help improve education, sanitation, health, tourism and industry in the Mpraeso community.",
     ],
   },
 ];

@@ -29,6 +29,8 @@ export function Navigation() {
       name: 'Leadership',
       links: [
         { name: 'Traditional Authority', href: '/traditional-authority' },
+        { name: 'Local Government', href: '/local-government' },
+        { name: 'Governance Archive', href: '/governance-archive' },
         { name: 'Prominent Members', href: '/prominent-members' },
         { name: 'Community', href: '/community' },
         { name: 'Diaspora', href: '/diaspora' },
@@ -53,10 +55,11 @@ export function Navigation() {
   ];
 
   const isActive = (href: string) => {
-    if (href === '/') {
+    const routePath = href.split('#')[0];
+    if (routePath === '/') {
       return location.pathname === '/';
     }
-    return location.pathname.startsWith(href);
+    return location.pathname.startsWith(routePath);
   };
 
   const isGroupActive = (links: NavLink[]) => links.some((link) => isActive(link.href));

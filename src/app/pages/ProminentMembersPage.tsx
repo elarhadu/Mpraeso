@@ -1,46 +1,8 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { ChevronDown, Search, UserRound } from "lucide-react";
+import { Search, UserRound } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import React from 'react';
-
-const honDavisImage = new URL(
-  "../../assests/Hon. Davis Ansah Opoku.jpeg",
-  import.meta.url,
-).href;
-
-const featuredMember = {
-  name: "Hon. Davis Ansah Opoku",
-  title: "Member of Parliament, Mpraeso Constituency",
-  image: honDavisImage,
-  profileSections: [
-    {
-      heading: "Brief Profile",
-      content:
-        "Hon. Davis Ansah Opoku is the Member of Parliament for the Mpraeso Constituency. He currently serves as the Vice Chairman of the Public Accounts Committee of Parliament and is also a member of the Information and Communication Committee. He holds an LLB from the University of London and has pursued further studies in law, governance, and digital policy. His work in Parliament focuses on accountability in public administration, digital transformation, and policies that promote economic opportunity. Beyond his parliamentary responsibilities, he remains deeply committed to community development across the Kwahu area, particularly in education, youth empowerment, tourism development, and infrastructure improvement.",
-    },
-    {
-      heading: "What makes Mpraeso unique",
-      content:
-        "Mpraeso holds a special place in the Kwahu area not only because of its beautiful location on the Kwahu Ridge but also because of the strength of its people and families. The town has produced generations of entrepreneurs, professionals, and community leaders whose influence extends across Ghana and beyond.",
-    },
-    {
-      heading: "Why investors should consider Mpraeso",
-      content:
-        "Mpraeso presents strong opportunities for investment. The town has a long-standing culture of entrepreneurship and commerce, and investors find a community that understands business, values partnerships, and supports enterprise.",
-    },
-    {
-      heading: "My vision for Mpraeso",
-      content:
-        "My vision is to see Mpraeso grow into a modern, vibrant town that preserves its cultural heritage while expanding economic opportunities.",
-    },
-    {
-      heading: "Message to Mpraeso citizens in the diaspora",
-      content:
-        "To the many sons and daughters of Mpraeso living around the world, I encourage you to remain connected to home. Your skills, experience, and investments can play a vital role in shaping the future of Mpraeso.",
-    },
-  ],
-};
+import React from "react";
 
 const prominentMembers = [
   {
@@ -172,84 +134,6 @@ const prominentMembers = [
   },
 ];
 
-function FeaturedProfile() {
-  const [openIndex, setOpenIndex] = useState(0);
-
-  return (
-    <motion.article
-      className="overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-gray-200"
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-    >
-      <div className="grid items-start lg:grid-cols-[380px_1fr]">
-        <div className="relative h-[420px] lg:h-[420px]">
-          <ImageWithFallback
-            src={featuredMember.image}
-            alt={featuredMember.name}
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent lg:hidden" />
-
-          <div className="absolute bottom-6 left-6 right-6 lg:hidden">
-            <p className="text-sm font-semibold text-[#d4a574]">
-              Featured Profile
-            </p>
-            <h3 className="text-3xl font-bold text-white">
-              {featuredMember.name}
-            </h3>
-          </div>
-        </div>
-
-        <div className="p-6 md:p-10">
-          <div className="hidden lg:block">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#3a6b35]">
-              Featured Profile
-            </p>
-            <h3 className="text-4xl font-bold tracking-tight text-gray-900">
-              {featuredMember.name}
-            </h3>
-            <p className="mt-2 text-lg font-medium text-[#7a5a33]">
-              {featuredMember.title}
-            </p>
-          </div>
-
-          <div className="mt-8 divide-y divide-gray-200">
-            {featuredMember.profileSections.map((section, index) => (
-              <div key={section.heading} className="py-4">
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
-                  className="flex w-full items-center justify-between gap-4 text-left"
-                >
-                  <span className="text-lg font-bold text-gray-900">
-                    {section.heading}
-                  </span>
-                  <ChevronDown
-                    size={20}
-                    className={`text-[#3a6b35] transition ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-
-                {openIndex === index && (
-                  <motion.p
-                    className="mt-3 text-base leading-8 text-gray-700"
-                    initial={{ opacity: 0, y: -6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                  >
-                    {section.content}
-                  </motion.p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </motion.article>
-  );
-}
-
 export function ProminentMembersPage() {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -293,7 +177,7 @@ export function ProminentMembersPage() {
         </motion.div>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="pb-20 md:pb-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             className="mx-auto mb-14 max-w-3xl text-center"
@@ -317,9 +201,7 @@ export function ProminentMembersPage() {
             </p>
           </motion.div>
 
-          <FeaturedProfile />
-
-          <div className="mt-20">
+          <div className="mt-8">
             <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-[#3a6b35]">
