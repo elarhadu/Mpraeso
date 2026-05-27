@@ -7,12 +7,13 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import mpraesoHeneImage from "../../assests/mpraesohene.jpeg";
 import adontengheneImage from "../../assests/adontenghene.jpeg";
 import nifaheneImage from "../../assests/nifahene.jpeg";
+import nkosuoheneImage from "../../assests/Nkosuohene.jpg";
 
 type ChiefProfile = {
   name: string;
   title: string;
   image: string;
-  enstooled: string;
+  enstooled?: string;
   focus: string;
   summary: string;
   details: string[];
@@ -90,6 +91,20 @@ const chiefProfiles: ChiefProfile[] = [
       "Hence, she intends to use her role to help improve education, sanitation, health, tourism and industry in the Mpraeso community.",
     ],
   },
+  {
+    name: "Nana Kofi Bediako Amoafo-Hene",
+    title: "Nkosuohene (Development Chief) of Kwahu-Mpraeso",
+    image: nkosuoheneImage,
+    focus: "Community empowerment, philanthropy, and development",
+    summary:
+      "Nana Kofi Bediako Amoafo-Hene is an astute businessman in the pharmaceutical industry in Ghana and the CEO of East Cantonments Pharmacy Limited (ECPL). He is also the Development Chief \"Nkosuohene\" of Kwahu-Mpraeso, with a vision to empower the community and propel its growth. He is renowned for his philanthropic spirit and value for human development and dignity.",
+    details: [
+      "Through East Cantonments Pharmacy Ltd, Nana Kofi Bediako Amoafo-Hene has consistently demonstrated a commitment to social responsibility, channelling the enterprise's resources and reach into meaningful contributions that uplift the Mpraeso community and beyond.",
+      "As Nkosuohene, his role is rooted in spearheading development — bridging the gap between the community's traditional foundations and the modern socio-economic opportunities that can transform lives. His vision is to empower the people of Kwahu-Mpraeso and propel the community's growth across all fronts.",
+      "Educational Background: Kwame Nkrumah University of Science & Technology (KNUST), 1985 – 1989 — BSc Civil Engineering.",
+      "Mpraeso Secondary School, 1977 – 1984 — General Certificate of Education (GCE) Advanced Level.",
+    ],
+  },
 ];
 
 function ChiefCard({ chief, index }: { chief: ChiefProfile; index: number }) {
@@ -137,9 +152,11 @@ function ChiefCard({ chief, index }: { chief: ChiefProfile; index: number }) {
 
           {/* Tags */}
           <div className="mb-6 flex flex-wrap gap-3">
-            <span className="rounded-full bg-[#3a6b35]/10 px-4 py-2 text-sm font-semibold text-[#3a6b35]">
-              Enstooled: {chief.enstooled}
-            </span>
+            {chief.enstooled && (
+              <span className="rounded-full bg-[#3a6b35]/10 px-4 py-2 text-sm font-semibold text-[#3a6b35]">
+                Enstooled: {chief.enstooled}
+              </span>
+            )}
 
             <span className="rounded-full bg-[#d4a574]/20 px-4 py-2 text-sm font-semibold text-[#7a5a33]">
               {chief.focus}
