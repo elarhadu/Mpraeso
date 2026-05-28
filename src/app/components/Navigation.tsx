@@ -32,6 +32,7 @@ export function Navigation() {
         { name: 'Local Government', href: '/local-government' },
         { name: 'Governance Archive', href: '/governance-archive' },
         { name: 'Prominent Members', href: '/prominent-members' },
+        { name: 'Hall of Fame', href: '/hall-of-fame' },
         { name: 'Community', href: '/community' },
         { name: 'Diaspora', href: '/diaspora' },
       ],

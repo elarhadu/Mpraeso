@@ -15,6 +15,7 @@ import { GalleryPage } from './pages/GalleryPage';
 import { ContactPage } from './pages/ContactPage';
 import { GovernanceArchivePage } from './pages/GovernanceArchivePage';
 import { LocalGovernmentPage } from './pages/LocalGovernmentPage';
+import { HallOfFamePage } from './pages/HallOfFamePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export const router = createBrowserRouter([
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
       { path: 'contact', Component: ContactPage },
       { path: 'governance-archive', Component: GovernanceArchivePage },
       { path: 'local-government', Component: LocalGovernmentPage },
+      { path: 'hall-of-fame', Component: HallOfFamePage },
       { path: '*', Component: NotFoundPage },
     ],
   },
