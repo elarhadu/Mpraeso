@@ -27,7 +27,7 @@ export function Footer() {
               <li><Link to="/about" className="text-gray-400 hover:text-[#d4a574] transition-colors">About</Link></li>
               <li><Link to="/traditional-authority" className="text-gray-400 hover:text-[#d4a574] transition-colors">Traditional Authority</Link></li>
               <li><Link to="/news-events" className="text-gray-400 hover:text-[#d4a574] transition-colors">News & Events</Link></li>
-              <li><Link to="/tourism" className="text-gray-400 hover:text-[#d4a574] transition-colors">Tourism & Culture</Link></li>
+              <li><Link to="/tourism" className="text-gray-400 hover:text-[#d4a574] transition-colors">Tourism & Investment</Link></li>
               <li><Link to="/education" className="text-gray-400 hover:text-[#d4a574] transition-colors">Education</Link></li>
               <li><Link to="/health" className="text-gray-400 hover:text-[#d4a574] transition-colors">Health</Link></li>
               <li><Link to="/prominent-members" className="text-gray-400 hover:text-[#d4a574] transition-colors">Prominent Members</Link></li>
@@ -35,6 +35,7 @@ export function Footer() {
               <li><Link to="/community" className="text-gray-400 hover:text-[#d4a574] transition-colors">Community Projects</Link></li>
               <li><Link to="/diaspora" className="text-gray-400 hover:text-[#d4a574] transition-colors">Diaspora Corner</Link></li>
               <li><Link to="/gallery" className="text-gray-400 hover:text-[#d4a574] transition-colors">Gallery</Link></li>
+              <li><Link to="/help-hotlines" className="text-gray-400 hover:text-[#d4a574] transition-colors">Help &amp; Hotlines</Link></li>
             </ul>
           </div>
 

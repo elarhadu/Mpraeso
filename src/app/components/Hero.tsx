@@ -41,7 +41,7 @@ export function Hero() {
             </p>
 
             <h1 className="mt-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
-              Discover the Beauty of Mpraeso
+              Invest in the Future of Mpraeso
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-sm text-white/75 md:text-base">
@@ -59,11 +59,11 @@ export function Hero() {
                     Visit Mpraeso
                   </a>
                   <a
-                    href="#events"
+                    href="#about"
                     className="inline-flex items-center gap-2 rounded-full bg-[#d4a574] px-8 py-3 text-sm font-semibold text-gray-900 transition-all hover:scale-105 hover:bg-[#c89560]"
                   >
                     <MapPin size={18} />
-                    Explore Our Culture
+                    Investment Opportunities
                   </a>
                 </>
               ) : (
@@ -76,11 +76,11 @@ export function Hero() {
                     Visit Mpraeso
                   </Link>
                   <Link
-                    to="/news-events"
+                    to="/business"
                     className="inline-flex items-center gap-2 rounded-full bg-[#d4a574] px-8 py-3 text-sm font-semibold text-gray-900 transition-all hover:scale-105 hover:bg-[#c89560]"
                   >
                     <MapPin size={18} />
-                    Explore Our Culture
+                    Investment Opportunities
                   </Link>
                 </>
               )}

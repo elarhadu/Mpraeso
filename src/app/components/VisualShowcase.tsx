@@ -1,28 +1,28 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Mountain, PartyPopper, Landmark } from 'lucide-react';
+import { MapPin, TrendingUp, Building2 } from 'lucide-react';
 
 const showcaseItems = [
   {
     id: 1,
-    title: 'Scenic Landscapes',
-    description: 'Breathtaking views of the Kwahu hills',
+    title: 'Strategic Location',
+    description: 'Gateway to the Kwahu highlands and Eastern Region commerce',
     image: 'https://images.unsplash.com/photo-1670615431202-6a7159da3f6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGhpbGxzJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc2NzE0ODI5N3ww&ixlib=rb-4.1.0&q=80&w=1080',
-    icon: Mountain,
+    icon: MapPin,
   },
   {
     id: 2,
-    title: 'Vibrant Festivals',
-    description: 'Rich cultural celebrations',
+    title: 'Commerce & Trade',
+    description: 'A thriving hub of enterprise and investment opportunity',
     image: 'https://images.unsplash.com/photo-1709808532841-6e336c7da4b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGZlc3RpdmFsJTIwY3VsdHVyZXxlbnwxfHx8fDE3NjcxNDgyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    icon: PartyPopper,
+    icon: TrendingUp,
   },
   {
     id: 3,
-    title: 'Historic Sites',
-    description: 'Traditional heritage landmarks',
+    title: 'Infrastructure Growth',
+    description: 'Modern development shaping the future of the municipality',
     image: 'https://images.unsplash.com/photo-1685260396904-6ea36832f694?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGFyY2hpdGVjdHVyZSUyMGJ1aWxkaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
-    icon: Landmark,
+    icon: Building2,
   },
 ];
 

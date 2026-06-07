@@ -1,8 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import { motion } from "motion/react";
-import { Star, Trophy } from "lucide-react";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { Star, Briefcase, Building2, GraduationCap, Heart, Landmark } from "lucide-react";
 
 type Category =
   | "All"
@@ -83,79 +82,94 @@ const honorees: Honoree[] = [
 
 const categories: Category[] = [
   "All",
+  "Business & Economy",
   "Community Development",
   "Education",
   "Healthcare",
-  "Business & Economy",
   "Culture & Heritage",
   "Philanthropy",
 ];
 
-const categoryColors: Record<Exclude<Category, "All">, string> = {
-  "Community Development": "bg-blue-50 text-blue-700 border-blue-200",
-  Education: "bg-purple-50 text-purple-700 border-purple-200",
-  Healthcare: "bg-rose-50 text-rose-700 border-rose-200",
-  "Business & Economy": "bg-amber-50 text-amber-700 border-amber-200",
-  "Culture & Heritage": "bg-orange-50 text-orange-700 border-orange-200",
-  Philanthropy: "bg-teal-50 text-teal-700 border-teal-200",
+const categoryIcons: Record<Exclude<Category, "All">, React.ElementType> = {
+  "Business & Economy": Briefcase,
+  "Community Development": Building2,
+  "Education": GraduationCap,
+  "Healthcare": Heart,
+  "Philanthropy": Heart,
+  "Culture & Heritage": Landmark,
 };
 
-function HonoreeCard({ honoree, index }: { honoree: Honoree; index: number }) {
+function StarPlaque({ honoree, index }: { honoree: Honoree; index: number }) {
+  const [expanded, setExpanded] = useState(false);
+  const CategoryIcon = categoryIcons[honoree.category];
+
   return (
     <motion.article
-      className="flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:shadow-xl"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      className="group relative cursor-pointer"
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+      transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
+      onClick={() => setExpanded(!expanded)}
     >
-      {/* Top accent */}
-      <div className="h-1.5 w-full bg-gradient-to-r from-[#3a6b35] via-[#d4a574] to-[#3a6b35]" />
+      {/* Outer brass frame */}
+      <div className="relative overflow-hidden border-[3px] border-[#c9a227] shadow-[0_0_40px_rgba(0,0,0,0.7),inset_0_1px_0_rgba(255,255,255,0.1)] transition-all duration-300 group-hover:shadow-[0_0_60px_rgba(201,162,39,0.25),0_0_40px_rgba(0,0,0,0.8)] group-hover:border-[#e8c040]">
+        {/* Inner brass inset line */}
+        <div className="absolute inset-[6px] border border-[#c9a227]/40 pointer-events-none z-10" />
 
-      <div className="flex flex-1 flex-col p-7">
-        {/* Avatar / image */}
-        <div className="mb-5 flex items-center gap-4">
-          <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-[#d4a574]/40 bg-[#faf8f5]">
-            {honoree.image ? (
-              <ImageWithFallback
-                src={honoree.image}
-                alt={honoree.name}
-                className="h-full w-full object-cover"
+        {/* Background — deep coral/crimson like the Walk of Fame */}
+        <div className="relative bg-[#8b1a1a] px-6 pb-8 pt-10 text-center">
+          {/* Subtle noise texture overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/[0.04] via-transparent to-black/20 pointer-events-none" />
+
+          {/* Star with category icon inset */}
+          <div className="relative mx-auto mb-5 inline-flex">
+            <Star
+              size={80}
+              className="text-[#c9a227] drop-shadow-[0_2px_12px_rgba(201,162,39,0.5)]"
+              fill="#c9a227"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <CategoryIcon
+                size={22}
+                className="text-[#8b1a1a]"
+                strokeWidth={2.5}
               />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center">
-                <span className="text-2xl font-bold text-[#3a6b35]/40">
-                  {honoree.name.charAt(0)}
-                </span>
-              </div>
-            )}
+            </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-bold leading-snug text-gray-900">
-              {honoree.name}
-            </h3>
-            <p className="text-sm text-gray-500">{honoree.title}</p>
-          </div>
-        </div>
-
-        {/* Badges */}
-        <div className="mb-5 flex flex-wrap gap-2">
-          <span
-            className={`rounded-full border px-3 py-1 text-xs font-semibold ${categoryColors[honoree.category]}`}
-          >
-            {honoree.category}
-          </span>
-          <span className="flex items-center gap-1 rounded-full border border-[#d4a574]/40 bg-[#d4a574]/10 px-3 py-1 text-xs font-semibold text-[#7a5a33]">
-            <Star size={11} className="fill-[#d4a574] text-[#d4a574]" />
+          {/* Induction year */}
+          <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.35em] text-[#c9a227]/60">
             Inducted {honoree.yearInducted}
-          </span>
-        </div>
+          </p>
 
-        {/* Citation */}
-        <p className="flex-1 text-sm leading-7 text-gray-600">
-          "{honoree.citation}"
-        </p>
+          {/* Name */}
+          <h3 className="mb-2 text-base font-extrabold uppercase leading-tight tracking-[0.12em] text-[#f5e09e]">
+            {honoree.name}
+          </h3>
+
+          {/* Title */}
+          <p className="text-[11px] font-medium text-[#c9a227]/75">
+            {honoree.title}
+          </p>
+
+          {/* Divider */}
+          <div className="mx-auto my-5 h-px w-12 bg-[#c9a227]/35" />
+
+          {/* Citation — shown on expand */}
+          <p
+            className={`text-[11px] leading-5 text-white/55 italic transition-all duration-300 ${
+              expanded ? "max-h-40 opacity-100" : "max-h-0 overflow-hidden opacity-0"
+            }`}
+          >
+            "{honoree.citation}"
+          </p>
+
+          {/* Tap hint */}
+          <p className="mt-4 text-[9px] uppercase tracking-widest text-[#c9a227]/40 transition-opacity group-hover:text-[#c9a227]/70">
+            {expanded ? "Tap to close" : "Tap to read"}
+          </p>
+        </div>
       </div>
     </motion.article>
   );
@@ -170,68 +184,61 @@ export function HallOfFamePage() {
       : honorees.filter((h) => h.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#faf8f5]">
-      {/* Hero */}
-      <section className="relative min-h-[500px] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a17] via-[#2d5016] to-[#3a6b35]" />
+    <div className="min-h-screen bg-[#0d0d0d]">
+      {/* Hero — sidewalk-dark with gold treatment */}
+      <section className="relative overflow-hidden bg-[#0d0d0d] py-28 md:py-36">
+        {/* Decorative star field */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          {[...Array(12)].map((_, i) => (
+            <Star
+              key={i}
+              size={i % 3 === 0 ? 24 : i % 3 === 1 ? 14 : 8}
+              fill="#c9a227"
+              className="absolute opacity-10"
+              style={{
+                left: `${(i * 17 + 5) % 95}%`,
+                top: `${(i * 13 + 8) % 85}%`,
+              }}
+            />
+          ))}
+        </div>
 
-        {/* Decorative gold circles */}
-        <div className="absolute -left-24 -top-24 h-96 w-96 rounded-full bg-[#d4a574]/10" />
-        <div className="absolute -bottom-16 -right-16 h-80 w-80 rounded-full bg-[#d4a574]/10" />
+        {/* Gold sidewalk stripe */}
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#c9a227] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-transparent via-[#c9a227] to-transparent" />
 
-        <motion.div
-          className="relative flex min-h-[500px] items-center justify-center px-4 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="max-w-4xl">
-            <div className="mb-6 flex justify-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[#d4a574]/40 bg-[#d4a574]/20">
-                <Trophy size={32} className="text-[#d4a574]" />
-              </div>
-            </div>
+        <div className="relative mx-auto max-w-4xl px-4 text-center">
+          {/* Large background star */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.04]">
+            <Star size={400} fill="#c9a227" className="text-[#c9a227]" />
+          </div>
 
-            <span className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-[#d4a574] backdrop-blur">
-              Recognising Excellence & Service
-            </span>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-[#c9a227]/60">
+              Mpraeso · Walk of Excellence
+            </p>
 
-            <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+            <h1 className="mb-6 text-6xl font-extrabold uppercase tracking-tight text-[#f5e09e] md:text-7xl lg:text-8xl"
+              style={{ textShadow: "0 0 60px rgba(201,162,39,0.3)" }}
+            >
               Hall of Fame
             </h1>
 
-            <p className="mx-auto max-w-2xl text-xl leading-relaxed text-white/85 md:text-2xl">
-              Honouring the sons and daughters of Mpraeso whose extraordinary
-              contributions have shaped and uplifted our community.
+            <div className="mx-auto mb-8 h-px w-40 bg-gradient-to-r from-transparent via-[#c9a227] to-transparent" />
+
+            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/50 md:text-xl">
+              Honouring the sons and daughters of Mpraeso whose extraordinary contributions have shaped and uplifted our community.
             </p>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Intro */}
-      <section className="py-20 md:py-24">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <span className="mb-5 inline-block text-sm font-bold uppercase tracking-[0.2em] text-[#3a6b35]">
-            A Legacy of Service
-          </span>
-
-          <h2 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
-            Those Who Gave Back
-          </h2>
-
-          <div className="mx-auto mb-8 h-1 w-24 rounded-full bg-[#d4a574]" />
-
-          <p className="text-xl leading-relaxed text-gray-600">
-            The Mpraeso Hall of Fame celebrates individuals who have gone above
-            and beyond to invest in the people, infrastructure, and culture of
-            our beloved community. Their deeds stand as an enduring inspiration
-            to all.
-          </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Filter */}
-      <section className="pb-10">
+      {/* Category filter */}
+      <section className="border-y border-[#c9a227]/15 bg-[#111111] py-6">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((cat) => (
@@ -239,10 +246,10 @@ export function HallOfFamePage() {
                 key={cat}
                 type="button"
                 onClick={() => setActiveCategory(cat)}
-                className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
+                className={`rounded-none border px-5 py-2 text-xs font-bold uppercase tracking-widest transition ${
                   activeCategory === cat
-                    ? "bg-[#3a6b35] text-white shadow"
-                    : "border border-gray-200 bg-white text-gray-600 hover:border-[#3a6b35]/30 hover:text-[#3a6b35]"
+                    ? "border-[#c9a227] bg-[#c9a227] text-[#0d0d0d]"
+                    : "border-[#c9a227]/25 text-[#c9a227]/50 hover:border-[#c9a227]/70 hover:text-[#c9a227]"
                 }`}
               >
                 {cat}
@@ -252,25 +259,33 @@ export function HallOfFamePage() {
         </div>
       </section>
 
-      {/* Honorees grid */}
-      <section className="pb-28">
+      {/* Stars grid */}
+      <section className="py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* "Sidewalk" label */}
+          <p className="mb-12 text-center text-[10px] uppercase tracking-[0.5em] text-[#c9a227]/30">
+            ★ &nbsp; Walk of Excellence &nbsp; · &nbsp; Kwahu Mpraeso &nbsp; ★
+          </p>
+
           <motion.div
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
             layout
           >
             {filtered.map((honoree, index) => (
-              <HonoreeCard key={honoree.name} honoree={honoree} index={index} />
+              <StarPlaque key={honoree.name} honoree={honoree} index={index} />
             ))}
           </motion.div>
 
           {filtered.length === 0 && (
-            <div className="py-24 text-center text-gray-400">
+            <div className="py-24 text-center text-[#c9a227]/30">
               No honorees in this category yet.
             </div>
           )}
         </div>
       </section>
+
+      {/* Bottom stripe */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-[#c9a227] to-transparent" />
     </div>
   );
 }

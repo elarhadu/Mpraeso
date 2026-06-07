@@ -53,13 +53,13 @@ export function Tourism() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-[#3a6b35]/10 text-[#3a6b35] px-4 py-2 rounded-full mb-4">
-            Tourism & Culture
+            Tourism & Investment
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Experience Mpraeso
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Discover the beauty, traditions, and vibrant festivals that make Mpraeso an unforgettable destination
+            Discover the landscapes, hospitality, and growing opportunities that make Mpraeso the premier destination for investment on the Kwahu Ridge
           </p>
           <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-[#3a6b35] to-transparent mx-auto"></div>
         </div>

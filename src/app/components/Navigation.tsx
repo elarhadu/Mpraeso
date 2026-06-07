@@ -21,6 +21,7 @@ export function Navigation() {
   const primaryLinks: NavLink[] = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
+    { name: 'Help & Hotlines', href: '/help-hotlines' },
     { name: 'Contact', href: '/contact' },
   ];
 
