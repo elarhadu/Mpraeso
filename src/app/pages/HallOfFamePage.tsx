@@ -24,68 +24,60 @@ type Honoree = {
 
 const honorees: Honoree[] = [
   {
-    name: "Dr. Kwame Asante Frimpong",
-    title: "Educator & School Builder",
-    category: "Education",
+    name: "Mr. Bediako Sarpong",
+    title: "Pioneer Pharmaceutical Businessman",
+    category: "Business & Economy",
     yearInducted: 2018,
     citation:
-      "Dr. Frimpong dedicated over two decades to expanding educational infrastructure in Mpraeso, personally funding the construction of three classroom blocks and establishing a scholarship fund that has since supported more than 200 students through secondary and tertiary education.",
+      "A trailblazer in Ghana's pharmaceutical sector, Mr. Bediako Sarpong helped establish the foundations of modern pharmacy practice and commerce in the Mpraeso community, inspiring generations of entrepreneurs to follow in his footsteps.",
   },
   {
-    name: "Madam Akosua Yeboah-Mensah",
-    title: "Healthcare Pioneer",
-    category: "Healthcare",
+    name: "Mr. Ernest Bediako",
+    title: "CEO of Ernest Chemist",
+    category: "Business & Economy",
     yearInducted: 2019,
     citation:
-      "A retired nurse of 30 years, Madam Yeboah-Mensah founded the first maternal and child health outreach programme in Mpraeso, drastically reducing infant mortality in the community through mobile clinics and free ante-natal education.",
+      "Mr. Ernest Bediako built Ernest Chemist into one of Ghana's recognised pharmacy brands, demonstrating that Mpraeso's sons can compete at the highest levels of national commerce while remaining deeply invested in the community.",
   },
   {
-    name: "Nana Osei Bonsu",
-    title: "Infrastructure Champion",
-    category: "Community Development",
-    yearInducted: 2020,
-    citation:
-      "Nana Osei Bonsu spearheaded the construction of the Mpraeso community water system and championed the tarring of key roads linking the town to surrounding villages, improving livelihoods and accessibility for thousands of residents.",
-  },
-  {
-    name: "Mr. Ernest Kwabena Acheampong",
-    title: "Entrepreneur & Job Creator",
+    name: "Mr. Ofosu Bediako",
+    title: "CEO of Bedita Pharmacy",
     category: "Business & Economy",
     yearInducted: 2020,
     citation:
-      "Through his agro-processing enterprise, Mr. Acheampong created over 150 direct jobs for residents of Mpraeso, while also establishing a mentorship programme that has helped dozens of young entrepreneurs start and scale their own businesses.",
+      "As the CEO of Bedita Pharmacy, Mr. Ofosu Bediako has continued the tradition of Mpraeso excellence in the pharmaceutical industry, expanding access to healthcare products and creating employment for many within the community.",
   },
   {
-    name: "Abena Osei-Tutu",
-    title: "Cultural Custodian",
-    category: "Culture & Heritage",
+    name: "Mr. A.Y. Danquah",
+    title: "Prominent Mpraeso Businessman",
+    category: "Business & Economy",
     yearInducted: 2021,
     citation:
-      "Abena Osei-Tutu established the Mpraeso Cultural Arts Centre, preserving traditional Kwahu crafts, music, and oral history. Her tireless efforts have ensured that the cultural identity of the community is documented and passed on to future generations.",
+      "A distinguished figure in Mpraeso's commercial life, Mr. A.Y. Danquah's entrepreneurial achievements and longstanding contributions to local trade have made him an enduring symbol of the town's business heritage.",
   },
   {
-    name: "Dr. Samuel Kofi Darko",
-    title: "Community Philanthropist",
-    category: "Philanthropy",
+    name: "Mr. Agyare Danquah",
+    title: "CEO of Metelex Group",
+    category: "Business & Economy",
     yearInducted: 2022,
     citation:
-      "Dr. Darko has contributed millions of cedis to community causes — from funding the renovation of the town's health centre to sponsoring annual community clean-up campaigns and providing relief support to vulnerable families during times of hardship.",
+      "Mr. Agyare Danquah has grown the Metelex Group into a significant enterprise, channelling his success into investment and development initiatives that benefit Mpraeso and the broader Kwahu region.",
   },
   {
-    name: "Mrs. Adwoa Amponsah-Baah",
-    title: "Champion of Women's Empowerment",
-    category: "Community Development",
-    yearInducted: 2022,
-    citation:
-      "Mrs. Amponsah-Baah founded the Mpraeso Women's Cooperative, a savings and skills group that has empowered over 300 women with vocational training, micro-loans, and market access, transforming countless households in the community.",
-  },
-  {
-    name: "Prof. Kweku Antwi Darkwa",
-    title: "Academic & Research Leader",
-    category: "Education",
+    name: "Mr. Alfred Kwadwo Danquah",
+    title: "CEO of Rockstars Roofing Ltd",
+    category: "Business & Economy",
     yearInducted: 2023,
     citation:
-      "Prof. Antwi Darkwa, a distinguished professor at a leading Ghanaian university, has consistently channelled research grants and academic partnerships back into Mpraeso, establishing a science laboratory at the local secondary school and hosting annual STEM outreach events.",
+      "Through Rockstars Roofing Ltd, Mr. Alfred Kwadwo Danquah has built a reputable construction and roofing enterprise that contributes to housing and infrastructure development, reflecting Mpraeso's growing capacity in the built environment sector.",
+  },
+  {
+    name: "Mrs. Justice Beatrice Agyeman-Bempang",
+    title: "Distinguished Member of the Judiciary",
+    category: "Community Development",
+    yearInducted: 2024,
+    citation:
+      "Mrs. Justice Beatrice Agyeman-Bempang has served the cause of justice with distinction, standing as an inspiration to the women and young people of Mpraeso and demonstrating that the town's daughters can reach the highest echelons of public service.",
   },
 ];
 

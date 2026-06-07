@@ -70,28 +70,6 @@ const chiefProfiles: ChiefProfile[] = [
     ],
   },
   {
-    name: "Nana Adwoa Obenewaa",
-    title: "Benkumhene of Mpraeso",
-    image: "/gallery/img-067-3a83339a-44b7-487e-97a5-98e44cd6e5cd.png",
-    enstooled: "7 April 2025",
-    focus: "Dispute resolution, inclusive governance, and education",
-    summary:
-      "Nana Adwoa Obenewaa is the Benkumhene of Mpraeso. Enstooled on the 7th of April 2025, she is one of two females currently occupying traditional stools in Mpraseo. Having had her education in Ghana, her professional life begun with a stint with the Heavy Equipment Department of the then Ghana National Trading Company (GNTC) before travelling to the United States of America where she excelled working as a Recordist in various companies.",
-    details: [
-      "At heart, she always had a knack for entrepreneurship and thus, in collaboration with her mother, was engaged in one form of private business venture or another at all material times from her elementary school days through to her tertiary education days, and even while working with GNTC.",
-      "It was therefore not surprising that upon returning to Ghana from the United States, she ventured into full-blown entrepreneurship. Over the years, through grit, hard work and commitment, she has grown to become one of the leading entrepreneurs in Ghana, winning numerous awards and recognitions for her contributions to the economic development of Ghana.",
-      "As the Benkum hene of Mpraeso, she conceptualizes traditional leadership primarily as a community-centered governance system whose core mandate is to ensure peace, stability, and social transformation. Rather than viewing chieftaincy as an archaic or ceremonial institution, she frames it as a functional and adaptive system of local governance that continues to play a critical role in contemporary society.",
-      "A central theme in her perspective is the practical relevance of traditional leadership in dispute resolution and community cohesion. She has an acute appreciation of the extent to which individuals bring private and sensitive issues before traditional authorities for adjudication and has come to appreciate this as a strength of the chieftaincy institution, noting its efficiency and accessibility compared to formal legal systems.",
-      "As part of the traditional leaders of Mpraeso, she has been part of the prompt resolution of disputes, whether related to land, family, or interpersonal conflicts with all parties present, thereby fostering immediate reconciliation and sustaining communal harmony. This reinforces her view that traditional leadership is not only historically rooted but remains socially legitimate and operationally effective in modern contexts.",
-      "She perceives leadership as a responsibility to improve the community and leave it better than it was found. This ethos shapes her approach to chieftaincy, where she seeks to introduce innovation, shift mindsets, and contribute to long-term societal transformation. Her vision is not limited to maintaining tradition but extends to modernizing the institution in ways that add tangible value, particularly through education, which she identifies as the foundation of societal progress. For her, education is holistic, encompassing both formal schooling and moral upbringing and serves as a catalyst for improvements in health, decision-making, and overall community development .",
-      "As a traditional leader, she advocates for participatory leadership characterized by consultation, inclusiveness, and consensus-building. Rather than imposing authority, she prefers engaging community members in decision-making processes, valuing their input, and ensuring that they take ownership of outcomes. This reflects a shift from hierarchical authority to a more deliberative and collaborative model of traditional governance",
-      "While acknowledging that the chieftaincy institution is historically male-dominated, she does not perceive her position as a limitation. Instead, she adapts to the norms of the institution by respecting its traditions while confidently occupying her role. Her approach reflects a pragmatic balance between cultural continuity and evolving gender roles, suggesting that traditional leadership can accommodate inclusivity without losing its identity.",
-      "Furthermore, She views her role as one that demands integrity, self-discipline, and a strong sense of duty to the community. This sense of accountability extends beyond formal expectations to an internalized obligation to serve as a role model and steward of development.",
-      "For Nana Obenewaa, traditional leadership is a dynamic, relevant, and community-driven institution. It is not merely a relic of the past but a viable governance system capable of promoting justice, development, and social cohesion when guided by visionary, accountable, and participatory leadership.",
-      "Hence, she intends to use her role to help improve education, sanitation, health, tourism and industry in the Mpraeso community.",
-    ],
-  },
-  {
     name: "Nana Kofi Bediako Amoafo-Hene",
     title: "Nkosuohene (Development Chief) of Kwahu-Mpraeso",
     image: nkosuoheneImage,

@@ -208,8 +208,8 @@ const governanceRoles: GovernanceRole[] = [
     ]
   },
   {
-    id: "guantoafohene",
-    title: "Guantoafohene",
+    id: "dwantoafohene",
+    title: "Dwantoafohene",
     category: "Governance & Administration",
     responsibilities: [
       "Does not occupy a black stool in the Palace.",

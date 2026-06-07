@@ -18,7 +18,7 @@ export function About() {
             {/* Left Content */}
             <div>
               <span className="inline-flex items-center rounded-full bg-[#3a6b35]/10 px-4 py-2 text-sm font-semibold text-[#3a6b35] mb-5">
-                About Our Community
+                Development
               </span>
 
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6">
@@ -36,14 +36,12 @@ export function About() {
                 </p>
 
                 <p>
-                  Our town serves as a center for traditional governance, education, commerce,
-                  and cultural life. We proudly preserve age-old traditions while embracing
-                  modern growth and development.
+                  Kwahu Mpraeso is a growing commercial and administrative centre offering strong opportunities for investment in education, healthcare, commerce, and infrastructure.
                 </p>
 
                 <p>
-                  Whether you are a resident, visitor, or member of our diaspora, Mpraeso
-                  welcomes you with warmth, pride, and the true spirit of Ghanaian hospitality.
+                  Whether you are a resident, investor, or member of our diaspora, Mpraeso
+                  welcomes you with warmth, pride, and the true spirit of Ghanaian enterprise.
                 </p>
               </div>
             </div>

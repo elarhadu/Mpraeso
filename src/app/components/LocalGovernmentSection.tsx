@@ -294,7 +294,7 @@ const socialServices = [
   "Mpraeso General Hospital",
   "Ghana Fire Service",
   "Ghana Ambulance Service",
-  "Ghana Police Service",
+  "Police Headquarters, Mpraeso",
   "Mpraeso Social Centre",
 ];
 
@@ -336,8 +336,9 @@ const demographicProfile: ProfileStat[] = [
   { label: "Age 15–64", value: "58%" },
   { label: "Age 65+", value: "7%" },
   { label: "Land Size", value: "98.5 km²" },
-  { label: "Borders", value: "Atibie, Obomeng, Bepong" },
-  { label: "Culture", value: "Easter" },
+  { label: "Notable Town", value: "Nkwatia" },
+  { label: "Borders", value: "Atibie, Nkwatia, Obomeng, Bepong" },
+  { label: "Culture", value: "Akwasidae" },
 ];
 
 function SectionHeader({
@@ -736,6 +737,22 @@ export function LocalGovernmentSection() {
             <SectionHeader title="Demographic & Area Profile" />
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {demographicProfile.map((item) => (
+                <StatCard key={item.label} item={item} />
+              ))}
+            </div>
+          </section>
+
+          <section className="rounded-3xl border border-[#3a6b35]/10 bg-white p-6 md:p-8">
+            <SectionHeader title="Contact the Local Assembly" subtitle="Reach the Kwahu South Municipal Assembly directly for enquiries, permits, and public services." />
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                { label: "Address", value: "Municipal Assembly Office, Mpraeso, Eastern Region" },
+                { label: "Phone", value: "+233 (0)342 091 00" },
+                { label: "Assembly Email", value: "info@ksmassembly.gov.gh" },
+                { label: "MCE Office", value: "+233 (0)342 091 01" },
+                { label: "MCD Office", value: "+233 (0)342 091 02" },
+                { label: "Working Hours", value: "Mon – Fri, 8:00 AM – 5:00 PM" },
+              ].map((item) => (
                 <StatCard key={item.label} item={item} />
               ))}
             </div>

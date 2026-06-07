@@ -28,8 +28,8 @@ const prominentMembers = [
       "Former Chairman of the World Fisheries at the United Nations and Former Deputy Agriculture Minister of Ghana",
   },
   {
-    name: "Mr. Bediako Amoatohene",
-    description: "CEO of East Cantonment Pharmacy",
+    name: "Mr. Bediako Amofo-Hene",
+    description: "CEO of East Cantonments Pharmacy",
   },
   {
     name: "S.E. Aniniagyei",
@@ -73,7 +73,7 @@ const prominentMembers = [
   { name: "J.K. Mensah", description: "Alias Asikafuohene" },
   {
     name: "Madam Suzzy Mensah",
-    description: "Community leader and prominent member",
+    description: "Former Member of Parliament and Former Deputy Eastern Regional Minister",
   },
   {
     name: "Nana Obenewaa",
@@ -97,8 +97,8 @@ const prominentMembers = [
     description: "Former Director of the Ghana School of Law",
   },
   {
-    name: "Obaa Yaa",
-    description: "Prominent member of the Mpraeso community",
+    name: "Obaa Yaa Sefa",
+    description: "Businesswoman",
   },
   {
     name: "Hon. Amankwah Yenoah",

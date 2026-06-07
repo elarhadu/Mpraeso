@@ -56,7 +56,7 @@ export function AboutPage() {
     {
       icon: Award,
       title: "Growing Development",
-      desc: "Education, healthcare, commerce, and infrastructure continue to drive progress across the municipality.",
+      desc: "Kwahu Mpraeso provides a great opportunity to invest in education, healthcare, commerce, and infrastructure.",
     },
   ];
 
@@ -88,7 +88,7 @@ export function AboutPage() {
             transition={{ duration: 0.7 }}
           >
             <span className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-[#d4a574] backdrop-blur">
-              History • Culture • Leadership • Community
+              Heritage • Development • Culture • Leadership
             </span>
 
             <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
@@ -97,7 +97,7 @@ export function AboutPage() {
 
             <p className="max-w-2xl text-xl leading-relaxed text-white/85 md:text-2xl">
               A historic Kwahu community shaped by heritage, unity, natural
-              beauty, and a shared commitment to progress.
+              beauty, and a shared commitment to development.
             </p>
           </motion.div>
         </div>
@@ -114,7 +114,7 @@ export function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <span className="mb-5 inline-block text-sm font-bold uppercase tracking-[0.25em] text-[#3a6b35]">
-                Our Community
+                Development
               </span>
 
               <h2 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">

@@ -5,24 +5,24 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 const upcomingEvents = [
   {
     id: 1,
-    title: 'Odwira Festival 2026',
-    date: 'March 15-22, 2026',
+    title: 'Akwasidae Festival',
+    date: 'Recurring — Every 6 Weeks',
     time: 'All Day',
-    location: 'Mpraeso Town Square',
-    description: 'Annual harvest and purification festival celebrating our heritage with traditional ceremonies, drumming, dancing, and cultural displays.',
+    location: 'Mpraeso Palace',
+    description: 'Sacred Akwasidae ceremony marking the royal calendar cycle. The Chief and elders gather for libations, drumming, and thanksgiving — a living expression of Kwahu heritage and ancestral reverence.',
     color: '#3a6b35',
     image: 'https://images.unsplash.com/photo-1660675134062-7d3bbb340608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMHRyYWRpdGlvbmFsJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzY3MTQ4Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080',
     featured: true
   },
   {
     id: 2,
-    title: 'Community Health Fair',
-    date: 'January 18, 2026',
-    time: '8:00 AM - 4:00 PM',
-    location: 'Mpraeso Health Center',
-    description: 'Free health screenings, vaccinations, and wellness consultations',
+    title: 'Kwahu Easter Festival',
+    date: 'April 2026',
+    time: 'Long Weekend',
+    location: 'Kwahu Ridge, Mpraeso',
+    description: 'The famous Kwahu Easter celebrations bring thousands home with cultural performances, traditional festivities, and vibrant community gatherings across the ridge.',
     color: '#d4a574',
-    image: 'https://images.unsplash.com/photo-1761666520005-3ffcf13e74c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwY29tbXVuaXR5JTIwZ2F0aGVyaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1709808532841-6e336c7da4b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGZlc3RpdmFsJTIwY3VsdHVyZXxlbnwxfHx8fDE3NjcxNDgyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
     featured: false
   },
   {
@@ -44,7 +44,7 @@ const upcomingEvents = [
     location: 'Various Locations',
     description: 'Welcome celebration for members of the Mpraeso diaspora',
     color: '#3a6b35',
-    image: 'https://images.unsplash.com/photo-1709808532841-6e336c7da4b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGZlc3RpdmFsJTIwY3VsdHVyZXxlbnwxfHx8fDE3NjcxNDgyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1761666520005-3ffcf13e74c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwY29tbXVuaXR5JTIwZ2F0aGVyaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
     featured: false
   },
 ];

@@ -6,7 +6,7 @@ const highlights = [
   {
     id: 1,
     title: 'Kwahu Easter Festival',
-    description: 'Experience the famous Easter celebrations with paragliding, cultural performances, and traditional festivities.',
+    description: 'Experience the famous Kwahu Easter celebrations with cultural performances, traditional festivities, and vibrant community gatherings on the ridge.',
     icon: Calendar,
     image: 'https://images.unsplash.com/photo-1660675134062-7d3bbb340608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMHRyYWRpdGlvbmFsJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzY3MTQ4Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
@@ -29,7 +29,7 @@ const highlights = [
 const attractions = [
   {
     id: 4,
-    name: 'Obomeng Mountain',
+    name: 'Kwahu Ridge Viewpoint',
     type: 'Natural Landmark',
     image: 'https://images.unsplash.com/photo-1670615431202-6a7159da3f6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGhpbGxzJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc2NzE0ODI5N3ww&ixlib=rb-4.1.0&q=80&w=1080',
   },
@@ -41,7 +41,7 @@ const attractions = [
   },
   {
     id: 6,
-    name: 'Local Craft Markets',
+    name: 'Local Craft Market — Earthenware Bowls',
     type: 'Shopping & Culture',
     image: 'https://images.unsplash.com/photo-1734255026082-82fdc81991f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwbWFya2V0JTIwY29tbXVuaXR5fGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
   },

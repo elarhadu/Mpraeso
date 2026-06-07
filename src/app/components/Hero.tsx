@@ -45,7 +45,7 @@ export function Hero() {
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-sm text-white/75 md:text-base">
-              Experience breathtaking landscapes, vibrant festivals, and rich cultural heritage in the majestic Kwahu hills.
+              Kwahu Mpraeso is the commercial hub of the Kwahu Ridge — a boiling pot of investment and development in the Eastern Region.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
