@@ -105,9 +105,7 @@ export function Tourism() {
                   <p className="text-gray-600 mb-4 text-lg">
                     {highlight.description}
                   </p>
-                  <button className="text-[#3a6b35] hover:text-[#2d5016] font-semibold flex items-center gap-2">
-                    Learn More <ArrowRight size={20} />
-                  </button>
+                  {/* Learn More — hidden until tourism pages are ready */}
                 </div>
               </motion.div>
             );
@@ -168,9 +166,7 @@ export function Tourism() {
                 <Camera size={24} />
                 Visit Mpraeso
               </button>
-              <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border-2 border-white/50 px-10 py-4 rounded-lg transition-all transform hover:scale-105 text-lg font-semibold">
-                Download Travel Guide
-              </button>
+              {/* Download Travel Guide — hidden until guide is ready */}
             </div>
           </div>
         </div>

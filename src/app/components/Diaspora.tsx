@@ -51,9 +51,7 @@ export function Diaspora() {
               <button className="bg-[#d4a574] hover:bg-[#c89560] text-gray-900 px-8 py-3 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
                 Register Now <ArrowRight size={20} />
               </button>
-              <button className="bg-white/20 hover:bg-white/30 text-white border border-white/30 px-8 py-3 rounded-lg transition-colors">
-                Learn More
-              </button>
+              {/* Learn More — hidden until diaspora page is ready */}
             </div>
           </div>
         </div>

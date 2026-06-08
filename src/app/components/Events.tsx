@@ -119,9 +119,7 @@ export function Events() {
                   </div>
                 </div>
                 
-                <button className="bg-[#d4a574] hover:bg-[#c89560] text-gray-900 px-10 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg font-semibold">
-                  Explore Our Culture
-                </button>
+                {/* Explore Our Culture — hidden until page is ready */}
               </div>
             </div>
           </motion.div>
@@ -173,15 +171,7 @@ export function Events() {
                   {event.description}
                 </p>
                 
-                <button
-                  className="text-sm px-4 py-2 rounded font-semibold transition-colors"
-                  style={{
-                    backgroundColor: `${event.color}15`,
-                    color: event.color
-                  }}
-                >
-                  Learn More
-                </button>
+                {/* Learn More — hidden until event pages are ready */}
               </div>
             </motion.div>
           ))}

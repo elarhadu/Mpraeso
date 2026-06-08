@@ -168,9 +168,7 @@ export function Gallery() {
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
             Discover hundreds more photos showcasing the beauty of Mpraeso, from scenic landscapes to cultural celebrations
           </p>
-          <button className="bg-[#d4a574] hover:bg-[#c89560] text-gray-900 px-10 py-4 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg font-semibold">
-            View Full Gallery
-          </button>
+          {/* View Full Gallery — hidden until gallery page is ready */}
         </div>
       </div>
     </section>

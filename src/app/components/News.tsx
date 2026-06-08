@@ -80,25 +80,13 @@ export function News() {
                   {item.excerpt}
                 </p>
                 
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-[#3a6b35] hover:text-[#2d5016] transition-colors text-sm"
-                >
-                  Read more <ArrowRight size={16} />
-                </a>
+                {/* Read more — hidden until articles are ready */}
               </div>
             </motion.article>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <a
-            href="#"
-            className="inline-block border-2 border-[#3a6b35] text-[#3a6b35] hover:bg-[#3a6b35] hover:text-white px-8 py-3 rounded-lg transition-colors"
-          >
-            View All News
-          </a>
-        </div>
+        {/* View All News — hidden until news archive is ready */}
       </div>
     </section>
   );
