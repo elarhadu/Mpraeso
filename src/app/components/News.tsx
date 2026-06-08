@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import healthImage from '../../assests/health.jpeg';
+import diasporaEducationImage from '../../assests/diaspora_education_donation.png';
 import openingSocialImage from '../../assests/opening_social.jpeg';
 
 const newsItems = [
@@ -17,7 +19,7 @@ const newsItems = [
     title: 'New Community Health Center Opens in Mpraeso',
     excerpt: 'State-of-the-art healthcare facility begins operations to serve residents with improved medical services.',
     date: 'December 15, 2025',
-    image: 'https://images.unsplash.com/photo-1685260396904-6ea36832f694?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGFyY2hpdGVjdHVyZSUyMGJ1aWxkaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: healthImage,
     category: 'Development'
   },
   {
@@ -25,7 +27,7 @@ const newsItems = [
     title: 'Diaspora Community Funds New School Block',
     excerpt: 'Mpraeso diaspora association donates funds for construction of modern classroom facilities at local primary school.',
     date: 'December 10, 2025',
-    image: 'https://images.unsplash.com/photo-1761666520005-3ffcf13e74c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwY29tbXVuaXR5JTIwZ2F0aGVyaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: diasporaEducationImage,
     category: 'Education'
   }
 ];

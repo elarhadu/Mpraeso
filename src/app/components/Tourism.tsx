@@ -2,8 +2,10 @@ import { motion } from 'motion/react';
 import { MapPin, Camera, Calendar, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import chiefGatheringImage from '../../assests/chief_gathering.jpeg';
-import womanEarthenwareImage from '../../assests/woman_making_earthenware.jpeg';
+import akwasidaeGroundsImage from '../../assests/akwasidae_grounds.png';
+import womanEarthenwareImage from '../../assests/earthenware.jpeg';
 import nightViewVideo from '../../assests/mpraeso_view_night.mp4';
+import traditionalPalaceImage from '../../assests/traditional_palace.jpeg';
 
 const highlights = [
   {
@@ -25,7 +27,7 @@ const highlights = [
     title: 'Traditional Palaces',
     description: 'Visit historic royal palaces and learn about the rich heritage of Kwahu traditional leadership.',
     icon: Camera,
-    image: 'https://images.unsplash.com/photo-1709808532841-6e336c7da4b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGZlc3RpdmFsJTIwY3VsdHVyZXxlbnwxfHx8fDE3NjcxNDgyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: traditionalPalaceImage,
   },
 ];
 
@@ -40,7 +42,7 @@ const attractions = [
     id: 5,
     name: 'Akwasidae Festival Grounds',
     type: 'Cultural Site',
-    image: 'https://images.unsplash.com/photo-1709808532841-6e336c7da4b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGZlc3RpdmFsJTIwY3VsdHVyZXxlbnwxfHx8fDE3NjcxNDgyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: akwasidaeGroundsImage,
   },
   {
     id: 6,

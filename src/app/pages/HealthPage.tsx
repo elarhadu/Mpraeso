@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Heart, Building2, Phone, AlertCircle } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import healthImage from '../../assests/health.jpeg';
 
 export function HealthPage() {
   return (
@@ -8,7 +9,7 @@ export function HealthPage() {
       <section className="relative h-[50vh] min-h-[400px]">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1579154201260-6cf4a6c117b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+            src={healthImage}
             alt="Health Services in Mpraeso"
             className="w-full h-full object-cover"
           />

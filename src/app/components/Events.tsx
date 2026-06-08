@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { Calendar, MapPin, Clock, Sparkles } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import youthImage from '../../assests/youth.png';
+import homecomingImage from '../../assests/homecoming.png';
 
 const upcomingEvents = [
   {
@@ -22,7 +24,7 @@ const upcomingEvents = [
     location: 'Kwahu Ridge, Mpraeso',
     description: 'The famous Kwahu Easter celebrations bring thousands home with cultural performances, traditional festivities, and vibrant community gatherings across the ridge.',
     color: '#d4a574',
-    image: 'https://images.unsplash.com/photo-1709808532841-6e336c7da4b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGZlc3RpdmFsJTIwY3VsdHVyZXxlbnwxfHx8fDE3NjcxNDgyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1660675134062-7d3bbb340608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMHRyYWRpdGlvbmFsJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzY3MTQ4Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080',
     featured: false
   },
   {
@@ -33,7 +35,7 @@ const upcomingEvents = [
     location: 'Municipal Assembly Hall',
     description: 'Skills training and entrepreneurship development for young people',
     color: '#8b6f47',
-    image: 'https://images.unsplash.com/photo-1734255026082-82fdc81991f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwbWFya2V0JTIwY29tbXVuaXR5fGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: youthImage,
     featured: false
   },
   {
@@ -44,7 +46,7 @@ const upcomingEvents = [
     location: 'Various Locations',
     description: 'Welcome celebration for members of the Mpraeso diaspora',
     color: '#3a6b35',
-    image: 'https://images.unsplash.com/photo-1761666520005-3ffcf13e74c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwY29tbXVuaXR5JTIwZ2F0aGVyaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: homecomingImage,
     featured: false
   },
 ];

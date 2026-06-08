@@ -17,7 +17,7 @@ export function Hero() {
           loop
           playsInline
           className="w-full h-full object-cover"
-          src={`${heroBgVideo}#t=10`}
+          src={`${heroBgVideo}#t=7`}
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/55"></div>
