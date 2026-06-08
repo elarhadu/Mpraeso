@@ -1,13 +1,15 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { MapPin, TrendingUp, Building2 } from 'lucide-react';
+import signboardImage from '../../assests/signboard.jpeg';
+import adminBlockImage from '../../assests/admin_block.jpeg';
 
 const showcaseItems = [
   {
     id: 1,
     title: 'Strategic Location',
     description: 'Gateway to the Kwahu highlands and Eastern Region commerce',
-    image: 'https://images.unsplash.com/photo-1670615431202-6a7159da3f6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGhpbGxzJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc2NzE0ODI5N3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: signboardImage,
     icon: MapPin,
   },
   {
@@ -21,7 +23,7 @@ const showcaseItems = [
     id: 3,
     title: 'Infrastructure Growth',
     description: 'Modern development shaping the future of the municipality',
-    image: 'https://images.unsplash.com/photo-1685260396904-6ea36832f694?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGFyY2hpdGVjdHVyZSUyMGJ1aWxkaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: adminBlockImage,
     icon: Building2,
   },
 ];

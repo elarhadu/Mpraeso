@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import React from "react";
 import { LocalGovernmentSection } from "../components/LocalGovernmentSection";
+import assemblyHallImage from "../../assests/assembly_hall.jpeg";
 
 const honDavisImage = new URL(
   "../../assests/Hon. Davis Ansah Opoku.jpeg",
@@ -51,7 +52,7 @@ export function LocalGovernmentPage() {
       <section className="relative min-h-[520px] overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+            src={assemblyHallImage}
             alt="Local Government in Mpraeso"
             className="h-full w-full object-cover"
           />

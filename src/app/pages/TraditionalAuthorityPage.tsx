@@ -8,6 +8,7 @@ import mpraesoHeneImage from "../../assests/mpraesohene.jpeg";
 import adontengheneImage from "../../assests/adontenghene.jpeg";
 import nifaheneImage from "../../assests/nifahene.jpeg";
 import nkosuoheneImage from "../../assests/Nkosuohene.jpg";
+import chiefGatheringImage from "../../assests/chief_gathering.jpeg";
 
 type ChiefProfile = {
   name: string;
@@ -207,7 +208,7 @@ export function TraditionalAuthorityPage() {
       <section className="relative min-h-[500px] overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1660675134062-7d3bbb340608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMHRyYWRpdGlvbmFsJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzY3MTQ4Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+            src={chiefGatheringImage}
             alt="Traditional Authority"
             className="h-full w-full object-cover"
           />

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { SubTowns } from "../components/SubTowns";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import signboardImage from "../../assests/signboard.jpeg";
 
 export function AboutPage() {
   const pillars = [
@@ -73,8 +74,8 @@ export function AboutPage() {
       <section className="relative min-h-[620px] overflow-hidden bg-[#142413]">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1670615431202-6a7159da3f6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGhpbGxzJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc2NzE0ODI5N3ww&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Mpraeso Landscape"
+            src={signboardImage}
+            alt="Mpraeso Signboard"
             className="h-full w-full object-cover opacity-35"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#142413] via-[#142413]/85 to-[#142413]/45" />

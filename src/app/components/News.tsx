@@ -1,14 +1,15 @@
 import { motion } from 'motion/react';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import openingSocialImage from '../../assests/opening_social.jpeg';
 
 const newsItems = [
   {
     id: 1,
-    title: 'Annual Odwira Festival Preparations Underway',
-    excerpt: 'The traditional council announces plans for this year\'s grand Odwira festival celebration with enhanced cultural programs.',
+    title: 'Annual Akwasidae Festival Preparations Underway',
+    excerpt: 'The traditional council announces plans for this year\'s grand Akwasidae festival celebration with enhanced cultural programs.',
     date: 'December 20, 2025',
-    image: 'https://images.unsplash.com/photo-1709808532841-6e336c7da4b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGZlc3RpdmFsJTIwY3VsdHVyZXxlbnwxfHx8fDE3NjcxNDgyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: openingSocialImage,
     category: 'Culture'
   },
   {

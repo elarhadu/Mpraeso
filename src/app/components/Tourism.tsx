@@ -1,6 +1,9 @@
 import { motion } from 'motion/react';
 import { MapPin, Camera, Calendar, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import chiefGatheringImage from '../../assests/chief_gathering.jpeg';
+import womanEarthenwareImage from '../../assests/woman_making_earthenware.jpeg';
+import nightViewVideo from '../../assests/mpraeso_view_night.mp4';
 
 const highlights = [
   {
@@ -8,7 +11,7 @@ const highlights = [
     title: 'Kwahu Easter Festival',
     description: 'Experience the famous Kwahu Easter celebrations with cultural performances, traditional festivities, and vibrant community gatherings on the ridge.',
     icon: Calendar,
-    image: 'https://images.unsplash.com/photo-1660675134062-7d3bbb340608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMHRyYWRpdGlvbmFsJTIwY2VyZW1vbnl8ZW58MXx8fHwxNzY3MTQ4Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: chiefGatheringImage,
   },
   {
     id: 2,
@@ -35,7 +38,7 @@ const attractions = [
   },
   {
     id: 5,
-    name: 'Odwira Festival Grounds',
+    name: 'Akwasidae Festival Grounds',
     type: 'Cultural Site',
     image: 'https://images.unsplash.com/photo-1709808532841-6e336c7da4b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGZlc3RpdmFsJTIwY3VsdHVyZXxlbnwxfHx8fDE3NjcxNDgyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
@@ -43,7 +46,7 @@ const attractions = [
     id: 6,
     name: 'Local Craft Market — Earthenware Bowls',
     type: 'Shopping & Culture',
-    image: 'https://images.unsplash.com/photo-1734255026082-82fdc81991f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwbWFya2V0JTIwY29tbXVuaXR5fGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: womanEarthenwareImage,
   },
 ];
 
@@ -140,10 +143,13 @@ export function Tourism() {
         {/* Bold CTA Section */}
         <div className="relative rounded-2xl overflow-hidden mt-16">
           <div className="absolute inset-0">
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1761666520005-3ffcf13e74c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwY29tbXVuaXR5JTIwZ2F0aGVyaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Visit Mpraeso"
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
               className="w-full h-full object-cover"
+              src={nightViewVideo}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#3a6b35]/95 to-[#2d5016]/90"></div>
           </div>

@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router';
 import { motion } from 'motion/react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { MapPin, Camera } from 'lucide-react';
+import heroBgVideo from '../../assests/mpraeso_view_day.mp4';
 
 export function Hero() {
   const location = useLocation();
@@ -9,12 +9,15 @@ export function Hero() {
 
   return (
     <section className="relative h-screen min-h-[760px] w-full overflow-hidden bg-black">
-      {/* Hero Image */}
+      {/* Hero Video */}
       <div className="absolute inset-0">
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1670615431202-6a7159da3f6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGhpbGxzJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc2NzE0ODI5N3ww&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Scenic view of Mpraeso hills"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
+          src={`${heroBgVideo}#t=10`}
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/55"></div>
