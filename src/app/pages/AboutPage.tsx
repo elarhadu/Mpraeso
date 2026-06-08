@@ -308,10 +308,7 @@ export function AboutPage() {
             Ghana.
           </p>
 
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#d4a574] px-6 py-3 font-semibold text-gray-900">
-            Discover the Community
-            <ArrowRight size={18} />
-          </div>
+          {/* Discover the Community — hidden until page is ready */}
         </div>
       </section>
     </div>
