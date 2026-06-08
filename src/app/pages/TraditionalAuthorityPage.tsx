@@ -71,6 +71,21 @@ const chiefProfiles: ChiefProfile[] = [
     ],
   },
   {
+    name: "Nana Obenewaa",
+    title: "Benkumhene of Mpraeso",
+    image: "/gallery/img-067-3a83339a-44b7-487e-97a5-98e44cd6e5cd.png",
+    enstooled: "7 April 2025",
+    focus: "Dispute resolution, inclusive governance, and education",
+    summary:
+      "Nana Obenewaa brings an inclusive and development-focused perspective to traditional leadership in Mpraeso. She is the second female chief enstooled by Nana Ampadu Daaduam III, a historic step cementing women's place in the traditional council.",
+    details: [
+      "Her enstoolment as Benkumhene followed the trailblazing example set by Nana Krobea Asante (Adontenhene), further affirming the Paramount Chief's commitment to female representation in traditional leadership.",
+      "Advocates culturally grounded dispute resolution and social trust within the community.",
+      "Supports participatory decision-making and inclusive governance at the traditional level.",
+      "Believes education is central to long-term development and actively promotes it within her role.",
+    ],
+  },
+  {
     name: "Nana Kofi Bediako Amoafo-Hene",
     title: "Nkosuohene (Development Chief) of Kwahu-Mpraeso",
     image: nkosuoheneImage,
@@ -232,7 +247,7 @@ export function TraditionalAuthorityPage() {
             </h1>
 
             <p className="text-xl leading-relaxed text-white/85 md:text-2xl">
-              Omanhene and the Chiefs of Mpraeso
+              The chief of Mpraeso sitting in State
             </p>
           </div>
         </motion.div>
