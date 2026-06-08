@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Search, UserRound } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import React from "react";
+import prominentImage from "../../assests/prominnent.png";
 
 const prominentMembers = [
   {
@@ -146,11 +147,11 @@ export function ProminentMembersPage() {
   return (
     <div className="min-h-screen bg-[#faf8f5]">
       <section className="relative min-h-[520px] overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-black">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+            src={prominentImage}
             alt="Prominent Members of Mpraeso"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/35" />
         </div>
