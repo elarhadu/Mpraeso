@@ -126,28 +126,6 @@ export function TourismPage() {
               </div>
             </div>
 
-            {/* Getting There */}
-            <div className="mt-12 bg-[#faf8f5] rounded-xl p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <MapPin size={32} className="text-[#3a6b35]" />
-                <h3 className="text-2xl font-bold text-gray-900">Getting to Mpraeso</h3>
-              </div>
-              <div className="space-y-4 text-gray-700">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">By Road</h4>
-                  <p>Approximately 2.5 hours drive from Accra via the Accra-Kumasi highway. Regular bus services available from major terminals.</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">By Air</h4>
-                  <p>Nearest airport is Kotoka International Airport in Accra. Private charter services available during Easter season.</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Local Transport</h4>
-                  <p>Taxis and motorbikes readily available within Mpraeso and surrounding sub-towns.</p>
-                </div>
-              </div>
-            </div>
-
             {/* Visitor Tips */}
             <div className="mt-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Visitor Tips</h3>

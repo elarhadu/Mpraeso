@@ -34,7 +34,7 @@ export function Navigation() {
         { name: 'Governance Archive', href: '/governance-archive' },
         { name: 'Prominent Members', href: '/prominent-members' },
         { name: 'Hall of Fame', href: '/hall-of-fame' },
-        { name: 'Community', href: '/community' },
+        { name: 'Ongoing Projects', href: '/community' },
         { name: 'Diaspora', href: '/diaspora' },
       ],
     },
@@ -42,6 +42,7 @@ export function Navigation() {
       name: 'Development',
       links: [
         { name: 'Tourism', href: '/tourism' },
+        { name: 'Investment Opportunities', href: '/investment-opportunities' },
         { name: 'Education', href: '/education' },
         { name: 'Health', href: '/health' },
         { name: 'Business', href: '/business' },

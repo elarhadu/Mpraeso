@@ -25,10 +25,10 @@ export function CommunityPage() {
         >
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Our Community
+              Contribute to Ongoing Projects
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
-              Building together, growing together, thriving together
+              Every donation, big or small, helps build a better Mpraeso
             </p>
           </div>
         </motion.div>

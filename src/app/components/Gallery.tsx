@@ -10,12 +10,6 @@ const galleryImages = [
     category: 'Landscapes'
   },
   {
-    id: 2,
-    src: 'https://images.unsplash.com/photo-1709808532841-6e336c7da4b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGZlc3RpdmFsJTIwY3VsdHVyZXxlbnwxfHx8fDE3NjcxNDgyOTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    alt: 'Traditional festival celebration',
-    category: 'Festivals'
-  },
-  {
     id: 3,
     src: 'https://images.unsplash.com/photo-1761666520005-3ffcf13e74c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwY29tbXVuaXR5JTIwZ2F0aGVyaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
     alt: 'Community gathering',
@@ -33,24 +27,12 @@ const galleryImages = [
     alt: 'Traditional ceremony',
     category: 'Culture'
   },
-  {
-    id: 6,
-    src: 'https://images.unsplash.com/photo-1685260396904-6ea36832f694?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxHaGFuYSUyMGFyY2hpdGVjdHVyZSUyMGJ1aWxkaW5nfGVufDF8fHx8MTc2NzE0ODI5OHww&ixlib=rb-4.1.0&q=80&w=1080',
-    alt: 'Local architecture',
-    category: 'Architecture'
-  },
   // Additional local images
   {
     id: 7,
     src: '/gallery/img-380-de4fc896-a686-4d85-b2d9-4b21fb808aa4.png',
     alt: 'Cultural ceremony with traditional fly-whisk',
     category: 'Culture'
-  },
-  {
-    id: 8,
-    src: '/gallery/img-097-b088dadb-c670-4678-9d70-07ef11021658.png',
-    alt: 'Woman in traditional black attire',
-    category: 'Portraits'
   },
   {
     id: 9,
@@ -69,12 +51,6 @@ const galleryImages = [
     src: '/gallery/img-419-d3c45718-8296-4947-a0be-22e93f3e587a.png',
     alt: 'Mpraeso Ahenfie ceremony',
     category: 'Culture'
-  },
-  {
-    id: 12,
-    src: '/gallery/img-067-3a83339a-44b7-487e-97a5-98e44cd6e5cd.png',
-    alt: 'Woman in traditional cloth',
-    category: 'Portraits'
   },
   {
     id: 13,

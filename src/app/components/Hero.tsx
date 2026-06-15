@@ -1,39 +1,7 @@
-import { useState, useRef } from 'react';
-import { Link, useLocation } from 'react-router';
 import { motion } from 'motion/react';
-import { MapPin, Camera, X } from 'lucide-react';
 import heroBgVideo from '../../assests/mpraeso_view_day.mp4';
-import nightVideo from '../../assests/mpraeso_view_night.mp4';
-
-const tourVideos = [heroBgVideo, nightVideo];
 
 export function Hero() {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
-  const [showPlayer, setShowPlayer] = useState(false);
-  const [videoIndex, setVideoIndex] = useState(0);
-  const playerRef = useRef<HTMLVideoElement>(null);
-
-  const openPlayer = () => {
-    setVideoIndex(0);
-    setShowPlayer(true);
-  };
-
-  const handleVideoMetadata = () => {
-    if (playerRef.current) {
-      playerRef.current.currentTime = 7;
-    }
-  };
-
-  const handleVideoEnd = () => {
-    if (videoIndex < tourVideos.length - 1) {
-      setVideoIndex(videoIndex + 1);
-    } else {
-      setShowPlayer(false);
-      setVideoIndex(0);
-    }
-  };
-
   return (
     <>
     <section className="relative h-screen min-h-[760px] w-full overflow-hidden bg-black">
@@ -54,7 +22,7 @@ export function Hero() {
       {/* Large blended wordmark */}
       <div className="pointer-events-none absolute inset-0 z-10 flex items-start justify-center pt-16 md:pt-20">
         <h1 className="select-none text-[11vw] font-extrabold uppercase leading-none tracking-tighter text-white/15 mix-blend-overlay">
-          MPRAESO
+          KWAHU MPRAESO
         </h1>
       </div>
 
@@ -79,77 +47,10 @@ export function Hero() {
               Kwahu Mpraeso is the commercial hub of the Kwahu Ridge — a boiling pot of investment and development in the Eastern Region.
             </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              {isHomePage ? (
-                <>
-                  <button
-                    onClick={openPlayer}
-                    className="inline-flex items-center gap-2 rounded-full bg-[#3a6b35] px-8 py-3 text-sm font-semibold text-white transition-all hover:scale-105 hover:bg-[#2d5016]"
-                  >
-                    <Camera size={18} />
-                    Visit Mpraeso
-                  </button>
-                  <a
-                    href="#about"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#d4a574] px-8 py-3 text-sm font-semibold text-gray-900 transition-all hover:scale-105 hover:bg-[#c89560]"
-                  >
-                    <MapPin size={18} />
-                    Investment Opportunities
-                  </a>
-                </>
-              ) : (
-                <>
-                  <Link
-                    to="/tourism"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#3a6b35] px-8 py-3 text-sm font-semibold text-white transition-all hover:scale-105 hover:bg-[#2d5016]"
-                  >
-                    <Camera size={18} />
-                    Visit Mpraeso
-                  </Link>
-                  <Link
-                    to="/business"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#d4a574] px-8 py-3 text-sm font-semibold text-gray-900 transition-all hover:scale-105 hover:bg-[#c89560]"
-                  >
-                    <MapPin size={18} />
-                    Investment Opportunities
-                  </Link>
-                </>
-              )}
-            </div>
           </motion.div>
         </div>
       </div>
     </section>
-
-    {/* Video player modal */}
-    {showPlayer && (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
-        <button
-          onClick={() => { setShowPlayer(false); setVideoIndex(0); }}
-          className="absolute top-4 right-4 z-10 rounded-full bg-white/20 p-2 text-white backdrop-blur transition hover:bg-white/40"
-        >
-          <X size={24} />
-        </button>
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
-          {tourVideos.map((_, i) => (
-            <div
-              key={i}
-              className={`h-1.5 w-10 rounded-full transition-all ${i === videoIndex ? 'bg-white' : 'bg-white/30'}`}
-            />
-          ))}
-        </div>
-        <video
-          key={videoIndex}
-          ref={playerRef}
-          autoPlay
-          playsInline
-          onLoadedMetadata={handleVideoMetadata}
-          onEnded={handleVideoEnd}
-          className="h-full w-full object-cover"
-          src={tourVideos[videoIndex]}
-        />
-      </div>
-    )}
     </>
   );
 }

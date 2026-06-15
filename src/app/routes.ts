@@ -16,6 +16,7 @@ import { ContactPage } from './pages/ContactPage';
 import { GovernanceArchivePage } from './pages/GovernanceArchivePage';
 import { LocalGovernmentPage } from './pages/LocalGovernmentPage';
 import { HallOfFamePage } from './pages/HallOfFamePage';
+import { InvestmentPage } from './pages/InvestmentPage';
 import { HelpHotlinesPage } from './pages/HelpHotlinesPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
@@ -40,6 +41,7 @@ export const router = createBrowserRouter([
       { path: 'governance-archive', Component: GovernanceArchivePage },
       { path: 'local-government', Component: LocalGovernmentPage },
       { path: 'hall-of-fame', Component: HallOfFamePage },
+      { path: 'investment-opportunities', Component: InvestmentPage },
       { path: 'help-hotlines', Component: HelpHotlinesPage },
       { path: '*', Component: NotFoundPage },
     ],
