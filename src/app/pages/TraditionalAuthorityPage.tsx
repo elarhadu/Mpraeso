@@ -41,6 +41,21 @@ const chiefProfiles: ChiefProfile[] = [
     ],
   },
   {
+    name: "Nana Welbeck Abra-Appiah",
+    title: "Krontihene of Mpraeso",
+    image: "",
+    enstooled: "February 2017",
+    focus: "Development-driven leadership, youth empowerment, and education",
+    summary:
+      "Nana Welbeck Abra-Appiah is a respected Ghanaian economist, corporate executive, sports administrator, and traditional leader who serves as the Krontihene of Mpraeso in the Kwahu Traditional Area. He was formally enstooled in February 2017 under the stool name Nana Abra-Appiah.",
+    details: [
+      "Born into the royal lineage of Kwahu, Nana Welbeck Abra-Appiah combines traditional leadership with a successful professional career spanning banking, finance, and public service. He has earned recognition as an accomplished economist and banker, occupying several leadership positions within Ghana's financial services industry including serving as the Board Chair of Consolidated Bank, Ghana.",
+      "His enstoolment in February 2017 marked a significant transition from his extensive corporate and sports administration career into active traditional leadership. As Krontihene, he has played an important role in supporting the development agenda of the Kwahu Traditional Area, promoting community cohesion, youth empowerment, education, and socio-economic advancement within Mpraeso and the wider Kwahu enclave.",
+      "Before assuming his traditional role, Nana Welbeck Abra-Appiah was one of Ghana's most recognised football administrators. He served as Chairman of the Ghana Premier League Board (PLB) for approximately a decade, overseeing important reforms and developments in Ghanaian football. He also served on committees associated with the management of the Black Stars and earned respect across the Ghana Football Association and the broader sporting community.",
+      "As Krontihene, he continues to advocate for development-driven traditional leadership, consistently emphasising the importance of education, entrepreneurship, youth participation, and strategic partnerships in advancing the welfare of the people of Kwahu. His unique combination of traditional authority, corporate experience, and public service has positioned him as a bridge between customary institutions and modern development initiatives.",
+    ],
+  },
+  {
     name: "Nana Krobea Asante",
     title: "Adontenhene of Mpraeso",
     image: adontengheneImage,
