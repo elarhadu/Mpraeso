@@ -9,8 +9,10 @@ import {
   Globe,
   Crown,
   ArrowRight,
+  HandHeart,
 } from "lucide-react";
 import { SubTowns } from "../components/SubTowns";
+import { Churches } from "../components/Churches";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import signboardImage from "../../assests/signboard.jpeg";
 
@@ -293,7 +295,48 @@ export function AboutPage() {
         </div>
       </section>
 
+      {/* Community Values */}
+      <section className="bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <span className="mb-4 inline-block text-sm font-bold uppercase tracking-[0.25em] text-[#3a6b35]">
+              What We Stand For
+            </span>
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
+              Our Community Values
+            </h2>
+            <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-[#d4a574]" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              { Icon: Users, title: 'Unity', desc: 'We stand together as one community, supporting each other across all sub-towns and generations.', dark: false },
+              { Icon: Heart, title: 'Compassion', desc: 'We care for the vulnerable, support those in need, and create opportunities for all to thrive.', dark: true },
+              { Icon: HandHeart, title: 'Service', desc: 'We serve our community through development projects, faith-based initiatives, and civic engagement.', dark: false },
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+              >
+                <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full mb-6 shadow-lg ${
+                  item.dark ? 'bg-gradient-to-br from-[#d4a574] to-[#c89560]' : 'bg-gradient-to-br from-[#3a6b35] to-[#2d5016]'
+                }`}>
+                  <item.Icon size={36} className={item.dark ? 'text-gray-900' : 'text-white'} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <SubTowns />
+      <Churches />
 
       {/* CTA */}
       <section className="bg-[#142413] py-20 text-white">

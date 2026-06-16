@@ -1,16 +1,6 @@
 import { useState, useRef } from 'react';
 import { Hero } from '../components/Hero';
 import { HeroTabs } from '../components/HeroTabs';
-import { About } from '../components/About';
-import { SubTowns } from '../components/SubTowns';
-import { News } from '../components/News';
-import { Tourism } from '../components/Tourism';
-import { Projects } from '../components/Projects';
-import { Events } from '../components/Events';
-import { Churches } from '../components/Churches';
-import { Diaspora } from '../components/Diaspora';
-import { Gallery } from '../components/Gallery';
-import { VideosTravelSection } from '../components/VideosTravelSection';
 import { X } from 'lucide-react';
 import heroBgVideo from '../../assests/mpraeso_view_day.mp4';
 import nightVideo from '../../assests/mpraeso_view_night.mp4';
@@ -48,16 +38,6 @@ export function HomePage() {
     <>
       <Hero />
       <HeroTabs onVideoOpen={openPlayer} />
-      <About />
-      <SubTowns />
-      <News />
-      <Tourism />
-      <Projects />
-      <Events />
-      <Churches />
-      <Diaspora />
-      <Gallery />
-      <VideosTravelSection />
 
       {/* Full-screen video player */}
       {showPlayer && (

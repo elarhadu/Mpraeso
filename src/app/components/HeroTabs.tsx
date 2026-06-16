@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
-import { HeartHandshake, TrendingUp, MessageCircle, Camera } from 'lucide-react';
+import { HeartHandshake, TrendingUp, MessageCircle, Camera, MapPin } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '+233200000000'; // Update this with the real number
 
@@ -37,6 +37,16 @@ export function HeroTabs({ onVideoOpen }: { onVideoOpen: () => void }) {
       iconBg: 'bg-white/15',
       dark: false,
     },
+    {
+      icon: MapPin,
+      label: 'Directions to Kwahu Mpraeso',
+      description: 'How to get here by road, air, and local transport',
+      href: '/directions',
+      bg: 'bg-[#8b6f47]',
+      hover: 'hover:bg-[#7a5a33]',
+      iconBg: 'bg-white/15',
+      dark: false,
+    },
   ];
 
   const tabInner = (icon: React.ElementType, label: string, description: string, dark: boolean, bg: string, hover: string, iconBg: string) => {
@@ -58,7 +68,7 @@ export function HeroTabs({ onVideoOpen }: { onVideoOpen: () => void }) {
     <section className="relative z-10 -mt-10 px-4 pb-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <motion.div
-          className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4"
+          className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
