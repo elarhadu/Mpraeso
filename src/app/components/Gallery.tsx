@@ -1,6 +1,10 @@
 import { motion } from 'motion/react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Camera, Image as ImageIcon } from 'lucide-react';
+import yenkoKwahuDrummers1 from '../../assests/yenkokwahu25-18.jpg';
+import yenkoKwahuDrummers2 from '../../assests/yenkokwahu25-19.jpg';
+import yenkoKwahuDance from '../../assests/yenkokwahu25-29.jpg';
+import yenkoKwahuBonfire from '../../assests/yenkokwahu25-66.jpg';
 
 const galleryImages = [
   {
@@ -57,6 +61,31 @@ const galleryImages = [
     src: '/gallery/img-096-2e1e4514-2aab-470f-9245-8dc38892b59e.png',
     alt: 'Community members in traditional and formal attire',
     category: 'Community'
+  },
+  // Yenko Kwahu 2025 festival photos
+  {
+    id: 14,
+    src: yenkoKwahuDrummers1,
+    alt: 'Drummers and a dancer at the Yenko Kwahu 2025 night festival',
+    category: 'Festivals'
+  },
+  {
+    id: 15,
+    src: yenkoKwahuDrummers2,
+    alt: 'Traditional drummers performing at Yenko Kwahu 2025',
+    category: 'Festivals'
+  },
+  {
+    id: 16,
+    src: yenkoKwahuDance,
+    alt: 'Dancers in kente cloth at Yenko Kwahu 2025',
+    category: 'Festivals'
+  },
+  {
+    id: 17,
+    src: yenkoKwahuBonfire,
+    alt: 'Bonfire celebration at Yenko Kwahu 2025',
+    category: 'Festivals'
   },
 ];
 

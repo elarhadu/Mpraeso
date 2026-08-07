@@ -8,7 +8,21 @@ import mpraesoHeneImage from "../../assests/mpraesohene.jpeg";
 import adontengheneImage from "../../assests/adontenghene.jpeg";
 import nifaheneImage from "../../assests/nifahene.jpeg";
 import nkosuoheneImage from "../../assests/Nkosuohene.jpg";
-import chiefGatheringImage from "../../assests/chief_gathering.jpeg";
+import sittingInState1 from "../../assests/sitting_in_state1.jpeg";
+import sittingInState2 from "../../assests/sitting_in_state2.jpeg";
+import sittingInState3 from "../../assests/sitting_in_state3.jpeg";
+import sittingInState4 from "../../assests/sitting_in_state4.jpeg";
+import sittingInState5 from "../../assests/sitting_in_state5.jpeg";
+import sittingInState6 from "../../assests/sitting_in_state6.jpeg";
+
+const sittingInStateImages = [
+  { src: sittingInState1, alt: "The Mpraesohene sitting in state at the Mpraeso Ahenfie" },
+  { src: sittingInState2, alt: "The Mpraesohene enthroned before his elders and sub-chiefs" },
+  { src: sittingInState6, alt: "Elders and sub-chiefs gathered around the Mpraesohene in state" },
+  { src: sittingInState4, alt: "An elder holding the ceremonial linguist staff" },
+  { src: sittingInState5, alt: "Sub-chiefs seated in traditional regalia beside the linguist staff" },
+  { src: sittingInState3, alt: "Sub-chiefs and elders of the Mpraeso traditional council" },
+];
 
 type ChiefProfile = {
   name: string;
@@ -238,8 +252,8 @@ export function TraditionalAuthorityPage() {
       <section className="relative min-h-[500px] overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src={chiefGatheringImage}
-            alt="Traditional Authority"
+            src={sittingInState1}
+            alt="The Mpraesohene sitting in state at the Mpraeso Ahenfie"
             className="h-full w-full object-cover"
           />
 
@@ -286,6 +300,52 @@ export function TraditionalAuthorityPage() {
             while guiding development, unity, and cultural identity for future
             generations.
           </p>
+        </div>
+      </section>
+
+      {/* Sitting in State */}
+      <section className="pb-20 md:pb-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="mb-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="mb-3 inline-block text-sm font-bold uppercase tracking-[0.2em] text-[#3a6b35]">
+              Ahenfie
+            </span>
+            <h2 className="mb-6 text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
+              The Mpraesohene Sitting in State
+            </h2>
+            <div className="mx-auto mb-6 h-1 w-24 rounded-full bg-[#d4a574]" />
+            <p className="mx-auto max-w-3xl text-lg leading-8 text-gray-600">
+              Flanked by his elders and sub-chiefs, and in the presence of the
+              ceremonial linguist staff, the Mpraesohene presides in state at
+              the Mpraeso Ahenfie — a moment that captures the dignity and
+              continuity of the palace.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {sittingInStateImages.map((image, index) => (
+              <motion.div
+                key={image.src}
+                className="group overflow-hidden rounded-2xl"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+              >
+                <ImageWithFallback
+                  src={image.src}
+                  alt={image.alt}
+                  className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 md:h-72"
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

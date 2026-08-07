@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
 import { MapPin, Camera, Calendar, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import chiefGatheringImage from '../../assests/chief_gathering.jpeg';
 import akwasidaeGroundsImage from '../../assests/akwasidae_grounds.png';
+import yenkoKwahuDanceImage from '../../assests/yenkokwahu25-29.jpg';
 import womanEarthenwareImage from '../../assests/earthenware.jpeg';
 import nightViewVideo from '../../assests/mpraeso_view_night.mp4';
 import traditionalPalaceImage from '../../assests/traditional_palace.jpeg';
@@ -13,7 +13,7 @@ const highlights = [
     title: 'Kwahu Easter Festival',
     description: 'Experience the famous Kwahu Easter celebrations with cultural performances, traditional festivities, and vibrant community gatherings on the ridge.',
     icon: Calendar,
-    image: chiefGatheringImage,
+    image: yenkoKwahuDanceImage,
   },
   {
     id: 2,

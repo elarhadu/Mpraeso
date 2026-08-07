@@ -1,9 +1,371 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Search, UserRound } from "lucide-react";
+import { Search } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import React from "react";
 import prominentImage from "../../assests/prominnent.png";
+import nanaMensahAbrampahImage from "../../assests/Nana Mensah Abrampah.jpeg";
+import nanaBamfoDwobengImage from "../../assests/NANA_BAMFO_DWOBENG.jpeg";
+import theodoreNyameImage from "../../assests/Theodore T. Nyame.jpeg";
+import fredNyarkoImage from "../../assests/Prof_Fred Nyarko.jpeg";
+import nanaAkuaSafoaImage from "../../assests/Nana Akua Safoa.jpeg";
+import dicksonKissiImage from "../../assests/Dickson A_Kissi.jpeg";
+import dorisVidaImage from "../../assests/Doris Ofosua Vida.jpeg";
+import samuelBoatengImage from "../../assests/Dr_Samuel Mintah Boaheng.jpeg";
+import godfriedBoakyeImage from "../../assests/Godfred Boakye.jpeg";
+
+type FeaturedProfile = {
+  name: string;
+  role: string;
+  image?: string;
+  summary: string;
+  details?: string[];
+};
+
+const featuredProfiles: FeaturedProfile[] = [
+  {
+    name: "Dr. Dickson Adomako Kissi",
+    role: "Chief Medical Officer, Deseret Hospital & Former MP for Anyaa Sowutuom",
+    image: dicksonKissiImage,
+    summary:
+      "Dr. Dickson Adomako Kissi hails from Mpraeso, Kwahu. He is currently the Chief Medical Officer at Deseret Hospital in Accra and a former Member of Parliament for the Anyaa Sowutuom Constituency, known as a strong advocate for transparency and good governance.",
+    details: [
+      "Education: Morning Star School, Cantonment-Accra (1996); St. Peter's Secondary School, Nkwatia Kwahu (1998); First Degree in Economics with a minor in Chemistry, Brigham Young University, USA (2004); University of Ghana, Legon Medical School (2013).",
+      "While in Ghana's Parliament, he served on the Public Accounts Committee, Communications Committee, Foreign Affairs and Regional Integration Committee, Environment, Science and Technology Committee, and the Health Committee.",
+      "He worked for five years at Tyco Healthcare (now Medtronic) in North Haven, Connecticut, USA, as a post-market analyst.",
+      "He has also served as a Medical Officer at the Police Hospital, VRA Akosombo, Pantang Hospital, and in private practice at Deseret Hospital.",
+    ],
+  },
+  {
+    name: "Nana Mensah Abrampah",
+    role: "Former Head of the Kwahu Community, Accra & Tema; Abusuapanin of Mpraeso Asona Takoworase",
+    image: nanaMensahAbrampahImage,
+    summary:
+      "Nana Mensah Abrampah was the Head of the Kwahu Community in Accra and Tema, and Abusuapanin of Mpraeso Asona Takoworase. He is remembered for his dedicated leadership, community service, and enduring contribution to the unity and progress of the Kwahu people.",
+  },
+  {
+    name: "Samuel K. B. Omari",
+    role: "Former Chairman, Mpraesoman Kuo; Director, Grandview Hotel & Power Plaza Hostels",
+    summary:
+      "Samuel K. B. Omari is a former chairman of Mpraesoman Kuo. He currently serves as a Director of Grandview Hotel and a Director of Power Plaza Hostels.",
+  },
+  {
+    name: "Mrs. Vida Fianko-Awuku",
+    role: "Trader, Makola Market",
+    summary:
+      "Mrs. Vida Fianko-Awuku, 75, hails from Kwahu Mpraeso and belongs to the Aduana Clan. She is a trader at Makola Market.",
+  },
+  {
+    name: "Kofi Baah Akyemfour",
+    role: "Chairman, Mpraesoman Kuo; Global President, Mpraeso Secondary School Past Students Association (Mpasspast)",
+    summary:
+      "Kofi Baah Akyemfour is the Chairman of Mpraesoman Kuo and the Global President of the Mpraeso Secondary School Past Students Association (Mpasspast). He is from the Asona Kwakwaduam clan of Mpraeso.",
+    details: [
+      "His parents, Comfort Serwaa Safo-Adjei (also known as Afi Donkor) and Kwabena Ofori Baah, both hailed from Mpraeso and are now deceased.",
+      "He is married to Nana Yaa Baah Akyemfour, and together they have three sons.",
+    ],
+  },
+  {
+    name: "Nana Bamfo Dwobeng I",
+    role: "Werempehene of Mpraeso & Odikro of Asuboni No. 3 (1919–2006)",
+    image: nanaBamfoDwobengImage,
+    summary:
+      "Nana Bamfo Dwobeng I served as the Werempehene of Mpraeso and Odikro of Asuboni No. 3 from 1919 to 2006.",
+    details: [
+      "He built the Mpraeso Stadium and slaughterhouse, and supplied electricity to the Mpraeso township, among many other contributions to the town's development.",
+    ],
+  },
+  {
+    name: "Godfried Boakye",
+    role: "Proprietor, Hi-Speed Enterprise",
+    image: godfriedBoakyeImage,
+    summary:
+      "Godfried Boakye runs Hi-Speed Enterprise, a supplier of welding materials and accessories located on Hanson Road near the Timber Market, Accra.",
+  },
+  {
+    name: "Dr. Theodore T. Nyame, MD",
+    role: "Board-Certified Plastic Surgeon, Charlotte Plastic Surgery, North Carolina",
+    image: theodoreNyameImage,
+    summary:
+      "Dr. Theodore T. Nyame, MD is a board-certified plastic surgeon, educator, and nationally recognized leader in aesthetic and reconstructive surgery. He is a partner at Charlotte Plastic Surgery in Charlotte, North Carolina, where he specializes in breast surgery, body contouring, and aesthetic procedures designed to help patients look and feel their best.",
+    details: [
+      "Dr. Nyame earned his undergraduate degree in Chemistry and Chemical Biology from Cornell University before attending Harvard Medical School. He completed his plastic surgery residency through the Harvard Plastic Surgery Program and pursued advanced fellowship training in aesthetic surgery in Australia. He has been recognized among America's top plastic surgeons and is frequently invited to lecture nationally and internationally on breast surgery, body contouring, and innovations in aesthetic medicine.",
+      "Born in Ghana and raised with deep ties to Mpraeso, a town in Ghana's Eastern Region, Dr. Nyame's journey reflects the power of education, perseverance, and service. From his early beginnings in West Africa to becoming one of the most respected plastic surgeons in the United States, he has remained grounded in the values instilled by his family, culture, and community.",
+      "Beyond the operating room, Dr. Nyame is passionate about mentorship, education, and global outreach. He is dedicated to helping the next generation of physicians and leaders realize their potential while honoring the heritage and experiences that shaped his own path.",
+      "Today, Dr. Nyame lives in Charlotte with his wife and two children, balancing a thriving surgical practice with his greatest roles: husband, father, mentor, and lifelong student.",
+    ],
+  },
+  {
+    name: "Pastor Fred Nyarko",
+    role: "General Overseer & Senior Pastor, Redemption Faith Ministries International, Amsterdam",
+    image: fredNyarkoImage,
+    summary:
+      "Pastor Fred Nyarko, 65, is a full-time Network Engineer and Consultant, and the General Overseer and Senior Pastor of Redemption Faith Ministries International in Amsterdam.",
+  },
+  {
+    name: "Nana Akua Safoa",
+    role: "CEO, Kay Candies, Netherlands",
+    image: nanaAkuaSafoaImage,
+    summary: "Nana Akua Safoa, 69, is the CEO of Kay Candies in the Netherlands.",
+  },
+  {
+    name: "Mr. Kwasi Abankwa Bediako",
+    role: "Chairperson, Mpraeso Citizens in the Netherlands",
+    summary:
+      "Mr. Kwasi Abankwa Bediako, 74, is the Chairperson of Mpraeso citizens in the Netherlands.",
+  },
+  {
+    name: "Doris Ofosua Vidda",
+    role: "Board Member & Advisor, Dutch Healthcare & Social Welfare Sectors",
+    image: dorisVidaImage,
+    summary:
+      "Doris Ofosua Vidda, 67, is a board member and advisor in the Dutch healthcare and social welfare sectors, specialising in strategic governance and client-centred care models.",
+    details: [
+      "She holds an M.A. in Sociology (ISS – Den Haag) and an M.A. in Spiritual Care (VU – Amsterdam), and bridges social development insights with holistic health strategies to drive impact in organisational leadership.",
+      "Core expertise: Healthcare Governance, Strategic Advisory & Social Analysis.",
+    ],
+  },
+  {
+    name: "Dr. Samuel Mintah Boateng",
+    role: "CEO, Dr. Sam International School; Publisher, Kwahu News",
+    image: samuelBoatengImage,
+    summary:
+      "Dr. Samuel Mintah Boateng is an accomplished educator, engineer, and community leader with extensive experience in academia, industry, and educational management. He received his secondary education at Mfantsipim School before pursuing higher education at the Russian State University of Oil and Gas and Ben-Gurion University in Israel, where he further developed his expertise in engineering and technology.",
+    details: [
+      "Throughout his distinguished career, Dr. Boateng has worked with Tema Oil Refinery, Tema Food Complex Corporation, and the Council for Scientific and Industrial Research (CSIR), contributing to Ghana's industrial and scientific advancement. He later joined All Nations University, where he served with distinction and retired as Head of the Department of Oil and Gas Engineering after mentoring and training many future engineers.",
+      "Dr. Boateng currently serves as the Chief Executive Officer of Dr. Sam International School in Accra, where he is committed to providing quality education and nurturing future leaders.",
+      "Beyond his professional achievements, Dr. Boateng is deeply committed to community development. He is the publisher of Kwahu News, a community newspaper dedicated to informing, educating, and promoting the development of the Kwahu area.",
+    ],
+  },
+];
+
+function ProfileDetails({
+  open,
+  details,
+  tone,
+}: {
+  open: boolean;
+  details: string[];
+  tone: "light" | "dark";
+}) {
+  if (!open) return null;
+  return (
+    <motion.div
+      className="mt-4 space-y-3"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.25 }}
+    >
+      {details.map((detail) => (
+        <p
+          key={detail}
+          className={`text-sm leading-relaxed ${tone === "dark" ? "text-white/70" : "text-gray-600"}`}
+        >
+          {detail}
+        </p>
+      ))}
+    </motion.div>
+  );
+}
+
+function ReadMoreToggle({
+  open,
+  onToggle,
+  tone,
+}: {
+  open: boolean;
+  onToggle: () => void;
+  tone: "light" | "dark";
+}) {
+  return (
+    <button
+      onClick={onToggle}
+      className={`mt-4 text-xs font-semibold uppercase tracking-wider transition ${
+        tone === "dark"
+          ? "text-[#d4a574] hover:text-white"
+          : "text-[#7a5a33] hover:text-[#3a6b35]"
+      }`}
+    >
+      {open ? "Hide full profile" : "Read full profile →"}
+    </button>
+  );
+}
+
+/**
+ * Bento-style featured card. Variant cycles by position among the
+ * image-bearing profiles so the grid reads as an asymmetric mosaic
+ * rather than a repeated template: spotlight (2-col) → vertical →
+ * compact → dark spotlight (2-col) → repeat.
+ */
+function FeaturedProfileBentoCard({
+  profile,
+  variant,
+}: {
+  profile: FeaturedProfile;
+  variant: "spotlight" | "vertical" | "compact" | "dark";
+}) {
+  const [open, setOpen] = useState(false);
+  const hasDetails = !!profile.details?.length;
+
+  if (variant === "spotlight") {
+    return (
+      <motion.div
+        className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-200/80 bg-white shadow-sm transition-all duration-500 hover:shadow-xl md:col-span-2"
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Image + summary row — height depends only on this content, never
+            on the expandable details below, so the photo never gets
+            re-cropped when "Read full profile" is toggled. */}
+        <div className="flex flex-col lg:flex-row">
+          <div className="relative min-h-[280px] overflow-hidden bg-gray-100 lg:w-1/2">
+            <ImageWithFallback
+              src={profile.image!}
+              alt={profile.name}
+              className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent lg:hidden" />
+          </div>
+
+          <div className="flex flex-col justify-between p-8 lg:w-1/2 lg:p-10">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#3a6b35]">
+                {profile.role}
+              </span>
+              <h3 className="mt-2 font-serif text-2xl font-medium text-gray-900 transition-colors group-hover:text-[#2d5016] lg:text-3xl">
+                {profile.name}
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-gray-600">{profile.summary}</p>
+
+              {hasDetails && (
+                <ReadMoreToggle open={open} onToggle={() => setOpen(!open)} tone="light" />
+              )}
+            </div>
+
+            <div className="mt-8 border-t border-gray-100 pt-6">
+              <span className="text-xs font-medium text-gray-500">Featured Profile</span>
+            </div>
+          </div>
+        </div>
+
+        {hasDetails && open && (
+          <div className="border-t border-gray-100 p-8 lg:p-10">
+            <ProfileDetails open={open} details={profile.details!} tone="light" />
+          </div>
+        )}
+      </motion.div>
+    );
+  }
+
+  if (variant === "dark") {
+    return (
+      <motion.div
+        className="group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-[#12210f] p-8 text-white shadow-md transition-all duration-500 hover:shadow-xl md:col-span-2"
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="max-w-xl">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#d4a574]">
+            {profile.role}
+          </span>
+          <h3 className="mt-2 font-serif text-2xl font-medium text-white lg:text-3xl">
+            {profile.name}
+          </h3>
+          <p className="mt-4 text-sm leading-relaxed text-white/70">{profile.summary}</p>
+
+          {hasDetails && (
+            <>
+              <ReadMoreToggle open={open} onToggle={() => setOpen(!open)} tone="dark" />
+              <ProfileDetails open={open} details={profile.details!} tone="dark" />
+            </>
+          )}
+        </div>
+
+        <div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6">
+          <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-[#d4a574]">
+            <ImageWithFallback
+              src={profile.image!}
+              alt={profile.name}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <span className="text-xs text-white/50">Featured Profile</span>
+        </div>
+      </motion.div>
+    );
+  }
+
+  if (variant === "compact") {
+    return (
+      <motion.div
+        className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-gray-200/80 bg-white p-8 shadow-sm transition-all duration-500 hover:shadow-xl"
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <div>
+          <div className="mb-6 flex items-center gap-4">
+            <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-white shadow-md">
+              <ImageWithFallback
+                src={profile.image!}
+                alt={profile.name}
+                className="h-full w-full object-cover transition-transform group-hover:scale-105"
+              />
+            </div>
+            <div>
+              <h3 className="font-serif text-xl font-medium text-gray-900 transition-colors group-hover:text-[#2d5016]">
+                {profile.name}
+              </h3>
+              <span className="text-xs font-semibold text-gray-500">{profile.role}</span>
+            </div>
+          </div>
+
+          <p className="text-sm leading-relaxed text-gray-600">{profile.summary}</p>
+        </div>
+
+        <div className="mt-8 border-t border-gray-100 pt-6">
+          <span className="text-xs font-medium text-[#7a5a33]">Featured Profile</span>
+        </div>
+      </motion.div>
+    );
+  }
+
+  // vertical
+  return (
+    <motion.div
+      className="group relative flex flex-col justify-between overflow-hidden rounded-3xl border border-gray-200/80 bg-white p-8 shadow-sm transition-all duration-500 hover:shadow-xl"
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <div>
+        <div className="relative mb-6 h-20 w-20 overflow-hidden rounded-2xl bg-gray-100 ring-4 ring-gray-50">
+          <ImageWithFallback
+            src={profile.image!}
+            alt={profile.name}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        </div>
+
+        <span className="text-xs font-semibold uppercase tracking-wider text-[#3a6b35]">
+          {profile.role}
+        </span>
+        <h3 className="mt-1 font-serif text-2xl font-medium text-gray-900 transition-colors group-hover:text-[#2d5016]">
+          {profile.name}
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-gray-600">{profile.summary}</p>
+      </div>
+    </motion.div>
+  );
+}
+
+const BENTO_VARIANTS = ["spotlight", "vertical", "compact", "dark"] as const;
 
 const prominentMembers = [
   {
@@ -138,7 +500,15 @@ const prominentMembers = [
 export function ProminentMembersPage() {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredMembers = prominentMembers.filter((member) =>
+  const bentoProfiles = featuredProfiles.filter((p) => p.image);
+  const rosterProfiles = featuredProfiles.filter((p) => !p.image);
+
+  const directory = [
+    ...rosterProfiles.map((p) => ({ name: p.name, description: p.role })),
+    ...prominentMembers,
+  ];
+
+  const filteredMembers = directory.filter((member) =>
     `${member.name} ${member.description}`
       .toLowerCase()
       .includes(searchTerm.toLowerCase()),
@@ -146,123 +516,102 @@ export function ProminentMembersPage() {
 
   return (
     <div className="min-h-screen bg-[#faf8f5]">
-      <section className="relative min-h-[520px] overflow-hidden">
-        <div className="absolute inset-0 bg-black">
-          <ImageWithFallback
-            src={prominentImage}
-            alt="Prominent Members of Mpraeso"
-            className="h-full w-full object-contain"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/35" />
-        </div>
-
-        <motion.div
-          className="relative flex min-h-[520px] items-center justify-center px-4 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <div className="max-w-4xl">
-            <span className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-[#d4a574] backdrop-blur">
+      <section className="bg-[#12210f]">
+        <div className="mx-auto grid max-w-7xl lg:grid-cols-[1fr_1.15fr]">
+          <motion.div
+            className="flex flex-col justify-center px-4 py-16 sm:px-6 lg:px-12 lg:py-24"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-[#d4a574]">
+              <span className="h-px w-8 bg-[#d4a574]" />
               Distinguished Citizens
-            </span>
+            </p>
 
-            <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+            <h1 className="max-w-md text-4xl font-bold leading-[1.1] tracking-tight text-white md:text-5xl">
               Prominent Members
             </h1>
 
-            <p className="text-xl leading-relaxed text-white/85 md:text-2xl">
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-white/70">
               Business leaders, academics, public servants, and community icons
               connected to Mpraeso.
             </p>
-          </div>
-        </motion.div>
-      </section>
-
-      <section className="pb-20 md:pb-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="mx-auto mb-14 max-w-3xl text-center"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <span className="mb-5 inline-block text-sm font-bold uppercase tracking-[0.2em] text-[#3a6b35]">
-              Our Distinguished Citizens
-            </span>
-
-            <h2 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
-              Leaders Who Shape Our Community
-            </h2>
-
-            <div className="mx-auto mb-8 h-1 w-24 rounded-full bg-[#d4a574]" />
-
-            <p className="text-xl leading-relaxed text-gray-600">
-              Mpraeso takes pride in its sons and daughters who have excelled in
-              business, academia, public service, and community leadership.
-            </p>
           </motion.div>
 
-          <div className="mt-8">
-            <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-[#3a6b35]">
-                  Directory
-                </p>
-                <h3 className="text-3xl font-bold tracking-tight text-gray-900">
-                  Other Prominent Members
-                </h3>
-              </div>
+          <div className="relative min-h-[260px] lg:min-h-[440px]">
+            <ImageWithFallback
+              src={prominentImage}
+              alt="Prominent Members of Mpraeso"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#12210f]/90 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-[#12210f]/40" />
+          </div>
+        </div>
+      </section>
 
-              <div className="relative w-full md:max-w-sm">
+      {/* Featured Profiles — bento grid */}
+      <section className="py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 max-w-2xl md:mb-24">
+            <span className="mb-4 inline-block rounded-full border border-[#3a6b35]/20 bg-[#3a6b35]/5 px-3 py-1 text-xs font-bold uppercase tracking-widest text-[#3a6b35]">
+              Community Leadership
+            </span>
+            <h2 className="font-serif text-4xl leading-[1.15] tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
+              Rooted in Mpraeso, shaping the world.
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-gray-600">
+              Meet the sons and daughters whose leadership, enterprise, and
+              service carry the Mpraeso name across Ghana and the diaspora.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {bentoProfiles.map((profile, index) => (
+              <FeaturedProfileBentoCard
+                key={profile.name}
+                profile={profile}
+                variant={BENTO_VARIANTS[index % BENTO_VARIANTS.length]}
+              />
+            ))}
+          </div>
+
+          {/* Secondary roster / directory */}
+          <div className="mt-20 border-t border-gray-200 pt-12">
+            <div className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-baseline sm:justify-between">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">
+                Special Advisory &amp; Other Members
+              </h3>
+
+              <div className="relative w-full sm:max-w-xs">
                 <Search
-                  size={18}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                  size={16}
+                  className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"
                 />
                 <input
                   type="text"
-                  placeholder="Search members..."
+                  placeholder="Search members…"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full rounded-full border border-gray-200 bg-white py-3 pl-11 pr-4 text-sm outline-none transition focus:border-[#3a6b35] focus:ring-4 focus:ring-[#3a6b35]/10"
+                  className="w-full rounded-full border border-gray-200 bg-white py-2 pl-9 pr-4 text-sm outline-none transition focus:border-[#3a6b35] focus:ring-2 focus:ring-[#3a6b35]/10"
                 />
               </div>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {filteredMembers.map((member, index) => (
-                <motion.div
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {filteredMembers.map((member) => (
+                <div
                   key={member.name}
-                  className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-200 transition hover:-translate-y-1 hover:shadow-lg"
-                  initial={{ opacity: 0, y: 18 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.35,
-                    delay: Math.min(index * 0.02, 0.2),
-                  }}
+                  className="rounded-xl border border-transparent p-4 transition-all hover:border-gray-200/80 hover:bg-white hover:shadow-sm"
                 >
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#3a6b35]/10 text-[#3a6b35]">
-                      <UserRound size={22} />
-                    </div>
-
-                    <div>
-                      <h4 className="text-lg font-bold text-gray-900">
-                        {member.name}
-                      </h4>
-                      <p className="mt-1 text-sm leading-6 text-gray-600">
-                        {member.description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
+                  <p className="text-sm font-medium text-gray-900">{member.name}</p>
+                  <p className="mt-0.5 text-xs text-gray-500">{member.description}</p>
+                </div>
               ))}
             </div>
 
             {filteredMembers.length === 0 && (
-              <div className="mt-10 rounded-2xl bg-white p-8 text-center text-gray-600 ring-1 ring-gray-200">
-                No members found for “{searchTerm}”.
-              </div>
+              <p className="mt-6 text-gray-500">No members found for “{searchTerm}”.</p>
             )}
           </div>
         </div>
