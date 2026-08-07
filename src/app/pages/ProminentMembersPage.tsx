@@ -13,6 +13,7 @@ import dicksonKissiImage from "../../assests/Dickson A_Kissi.jpeg";
 import dorisVidaImage from "../../assests/Doris Ofosua Vida.jpeg";
 import samuelBoatengImage from "../../assests/Dr_Samuel Mintah Boaheng.jpeg";
 import godfriedBoakyeImage from "../../assests/Godfred Boakye.jpeg";
+import oyirifieAkotoBamfoImage from "../../assests/Oyirifie Nana Akoto-Bamfo.jpeg";
 
 type FeaturedProfile = {
   name: string;
@@ -81,6 +82,19 @@ const featuredProfiles: FeaturedProfile[] = [
     image: godfriedBoakyeImage,
     summary:
       "Godfried Boakye runs Hi-Speed Enterprise, a supplier of welding materials and accessories located on Hanson Road near the Timber Market, Accra.",
+  },
+  {
+    name: "Oyirifie Nana Akoto-Bamfo",
+    role: "Dwantoafohene of the Okwahu Community, Accra (1944–1996)",
+    image: oyirifieAkotoBamfoImage,
+    summary:
+      "Eugene Kwasi Asiedu Akoto-Bamfo — known in private life as Kwasi Akoto and, after his enstoolment, as Oyirifie Nana Akoto-Bamfo — was born at Suhum in the Eastern Region on 16 April 1944, to Mr. Edmund Kwabena Akoto-Bamfo and Madam Deborah Amma Adwoa Akoto-Bamfo, both of Mpraeso. He was sworn in as Dwantoafohene of the Okwahu Community in Accra in June 1993, during the reign of the late Chief Kwadwo Donkoh, and died in 1996 at the age of 52.",
+    details: [
+      "He was educated at Abetifi Presbyterian Middle Boarding School (1956–1959), Okuapeman Secondary School (G.C.E. Ordinary Level, 1964), and Apam Secondary School (G.C.E. Advanced Level, 1966), before reading Law at the University of Ghana. He obtained his Bachelor of Laws with Honours and was called to the Ghana Bar in 1970.",
+      "He began his career as a Legal Officer and underwriter with the British General Insurance Company, rising to Deputy General Manager. In 1980, he co-founded the Great African Insurance Company Limited and served as its Managing Director, building it into a household name in Ghana.",
+      "As a lawyer, he was active in the Ghana Bar Association, serving as its National Treasurer for six consecutive years, and lectured in Insurance Law at the Ghana School of Law. He also served on the Police Council, chaired the Executive Council of the Ghana United Nations Association, and was a Freemason.",
+      "As Dwantoafohene, he revitalised the Okwahu Community Council's activities in Accra, sharing his experience as an advocate, counsellor, and arbiter in the settlement of disputes. He was widely remembered for his humility, generosity, and Christian charity, and served as patron to numerous societies and welfare clubs before his death at age 52.",
+    ],
   },
   {
     name: "Dr. Theodore T. Nyame, MD",

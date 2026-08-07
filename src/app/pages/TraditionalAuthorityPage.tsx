@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 import mpraesoHeneImage from "../../assests/mpraesohene.jpeg";
+import krontiheneImage from "../../assests/Krontihene.jpeg";
 import adontengheneImage from "../../assests/adontenghene.jpeg";
 import nifaheneImage from "../../assests/nifahene.jpeg";
 import nkosuoheneImage from "../../assests/Nkosuohene.jpg";
@@ -57,7 +58,7 @@ const chiefProfiles: ChiefProfile[] = [
   {
     name: "Nana Welbeck Abra-Appiah",
     title: "Krontihene of Mpraeso",
-    image: "",
+    image: krontiheneImage,
     enstooled: "February 2017",
     focus: "Development-driven leadership, youth empowerment, and education",
     summary:
@@ -67,6 +68,7 @@ const chiefProfiles: ChiefProfile[] = [
       "His enstoolment in February 2017 marked a significant transition from his extensive corporate and sports administration career into active traditional leadership. As Krontihene, he has played an important role in supporting the development agenda of the Kwahu Traditional Area, promoting community cohesion, youth empowerment, education, and socio-economic advancement within Mpraeso and the wider Kwahu enclave.",
       "Before assuming his traditional role, Nana Welbeck Abra-Appiah was one of Ghana's most recognised football administrators. He served as Chairman of the Ghana Premier League Board (PLB) for approximately a decade, overseeing important reforms and developments in Ghanaian football. He also served on committees associated with the management of the Black Stars and earned respect across the Ghana Football Association and the broader sporting community.",
       "As Krontihene, he continues to advocate for development-driven traditional leadership, consistently emphasising the importance of education, entrepreneurship, youth participation, and strategic partnerships in advancing the welfare of the people of Kwahu. His unique combination of traditional authority, corporate experience, and public service has positioned him as a bridge between customary institutions and modern development initiatives.",
+      "His contributions to sports administration and corporate leadership have been widely recognised, including the Sports Achievement Award (2015) from the Ghana Sports Awards, the Outstanding Board Chairman of the Year award (2020) from the Ghana Entrepreneurs & Corporate Executive Awards, and a Meritorious Award (2021) from the Sports Writers Association of Ghana (SWAG).",
     ],
   },
   {
