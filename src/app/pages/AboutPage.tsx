@@ -12,7 +12,6 @@ import {
   HandHeart,
 } from "lucide-react";
 import { SubTowns } from "../components/SubTowns";
-import { Churches } from "../components/Churches";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import signboardImage from "../../assests/signboard.jpeg";
 
@@ -336,7 +335,6 @@ export function AboutPage() {
       </section>
 
       <SubTowns />
-      <Churches />
 
       {/* CTA */}
       <section className="bg-[#142413] py-20 text-white">

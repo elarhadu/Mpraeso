@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import { motion } from 'motion/react';
 import { HeartHandshake, TrendingUp, MessageCircle, Camera, MapPin } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '+233200000000'; // Update this with the real number
+const WHATSAPP_NUMBER = '+233 24 333 3902';
 
 export function HeroTabs({ onVideoOpen }: { onVideoOpen: () => void }) {
   const linkTabs = [

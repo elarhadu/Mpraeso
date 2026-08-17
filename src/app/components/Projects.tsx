@@ -112,7 +112,7 @@ function DonateModal({ project, onClose }: { project: Project; onClose: () => vo
             </div>
             <div>
               <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gray-400">Mobile Money (MoMo)</p>
-              <p className="font-semibold text-gray-900">024 XXX XXXX &mdash; Mpraeso Dev Fund</p>
+              <p className="font-semibold text-gray-900">+233 24 333 3902 &mdash; Mpraeso Dev Fund</p>
             </div>
           </div>
 

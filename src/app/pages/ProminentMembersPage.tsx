@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Search } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import React from "react";
-import prominentImage from "../../assests/prominnent.png";
+import sittingInState2 from "../../assests/sitting_in_state2.jpeg";
 import nanaMensahAbrampahImage from "../../assests/Nana Mensah Abrampah.jpeg";
 import nanaBamfoDwobengImage from "../../assests/NANA_BAMFO_DWOBENG.jpeg";
 import theodoreNyameImage from "../../assests/Theodore T. Nyame.jpeg";
@@ -14,6 +14,16 @@ import dorisVidaImage from "../../assests/Doris Ofosua Vida.jpeg";
 import samuelBoatengImage from "../../assests/Dr_Samuel Mintah Boaheng.jpeg";
 import godfriedBoakyeImage from "../../assests/Godfred Boakye.jpeg";
 import oyirifieAkotoBamfoImage from "../../assests/Oyirifie Nana Akoto-Bamfo.jpeg";
+import ernestBediakoSampongImage from "../../assests/Ernest Bediako Sampong.png";
+import owoaheneAkyeampongImage from "../../assests/Nana Owuahene Acheampong.jpeg";
+import effahOseiBonsuDavidImage from "../../assests/Effah Osei Bonsu David.jpeg";
+import beatriceWiafeAddaiImage from "../../assests/Beatrice Wiafe-Addai.png";
+import georgeSarpongImage from "../../assests/George A_Sarpong.jpeg";
+import ebenezerOduroOwusuImage from "../../assests/Ebenezer Oduro Owusu.png";
+import kingsleyYoungOpareImage from "../../assests/Kingsley Young Opare Mpraeso.jpeg";
+import kwasiAbankwaBediakoImage from "../../assests/Kwasi Abankwa Bediako.jpeg";
+import kofiBaahAkyemfourImage from "../../assests/Kofi Baah Akyemfour.jpeg";
+import vidaFiankoAwukuImage from "../../assests/Vida Fianko-Awuku.jpeg";
 
 type FeaturedProfile = {
   name: string;
@@ -53,12 +63,14 @@ const featuredProfiles: FeaturedProfile[] = [
   {
     name: "Mrs. Vida Fianko-Awuku",
     role: "Trader, Makola Market",
+    image: vidaFiankoAwukuImage,
     summary:
       "Mrs. Vida Fianko-Awuku, 75, hails from Kwahu Mpraeso and belongs to the Aduana Clan. She is a trader at Makola Market.",
   },
   {
     name: "Kofi Baah Akyemfour",
     role: "Chairman, Mpraesoman Kuo; Global President, Mpraeso Secondary School Past Students Association (Mpasspast)",
+    image: kofiBaahAkyemfourImage,
     summary:
       "Kofi Baah Akyemfour is the Chairman of Mpraesoman Kuo and the Global President of the Mpraeso Secondary School Past Students Association (Mpasspast). He is from the Asona Kwakwaduam clan of Mpraeso.",
     details: [
@@ -125,6 +137,7 @@ const featuredProfiles: FeaturedProfile[] = [
   {
     name: "Mr. Kwasi Abankwa Bediako",
     role: "Chairperson, Mpraeso Citizens in the Netherlands",
+    image: kwasiAbankwaBediakoImage,
     summary:
       "Mr. Kwasi Abankwa Bediako, 74, is the Chairperson of Mpraeso citizens in the Netherlands.",
   },
@@ -149,6 +162,89 @@ const featuredProfiles: FeaturedProfile[] = [
       "Throughout his distinguished career, Dr. Boateng has worked with Tema Oil Refinery, Tema Food Complex Corporation, and the Council for Scientific and Industrial Research (CSIR), contributing to Ghana's industrial and scientific advancement. He later joined All Nations University, where he served with distinction and retired as Head of the Department of Oil and Gas Engineering after mentoring and training many future engineers.",
       "Dr. Boateng currently serves as the Chief Executive Officer of Dr. Sam International School in Accra, where he is committed to providing quality education and nurturing future leaders.",
       "Beyond his professional achievements, Dr. Boateng is deeply committed to community development. He is the publisher of Kwahu News, a community newspaper dedicated to informing, educating, and promoting the development of the Kwahu area.",
+    ],
+  },
+  {
+    name: "Ernest Bediako Sampong",
+    role: "Founder & Chairman, Ernest Chemists Ltd (ECL)",
+    image: ernestBediakoSampongImage,
+    summary:
+      "Mr. Ernest Bediako Sampong is a pharmacist, entrepreneur, and the Founder and Chairman of the Board of Directors of Ernest Chemists Ltd (ECL), a leading Ghanaian pharmaceutical company with a staff strength of about 1,000. He is a product of Adisadel College and the Kwame Nkrumah University of Science and Technology.",
+    details: [
+      "His direct assistance, coaching, and mentoring have helped spawn many entrepreneurs, among them East Cantonments Pharmacy, Bedita Pharmacy, Renie Chemists, Pills & Tabs Pharmacy, Medimart Pharmacy, Parmarts Pharmacy, Alby Chemists, Kent Pharmacy, Media Pharmacy, and Kekule Pharmacy. He is involved in numerous philanthropic activities across the country, especially health-related interventions, and through ECL owns and operates Nestpharma Limited in Freetown, Sierra Leone.",
+      "He made his experience as an entrepreneur available in public service when President John Agyekum Kufuor appointed him to the presidential committee for the revitalisation of the industrial sector.",
+      "His achievements have earned him numerous national and global awards, including the 2001 CIMG Marketing Man of the Year, 10th Most Respected CEO by PricewaterhouseCoopers (2007 and 2009), Ghana's Order of the Volta (Officer Category), CEO of the Year at the Ghana Pharma Awards (2017, 2019), Man of the Year – Health at the EMY Africa Awards (2017, 2020), CEO of the Year at the Ghana CEO Excellence Awards (2018) and Ghana CEO Summit (2019), and a Lifetime Achievement Award at the Ghana Pharma Awards (2023). In 2025, the Pharmaceutical Society of Ghana named its CEO of the Year award category after him.",
+      "He continues to groom, inspire, and create opportunities for young entrepreneurs in the pharmaceutical industry. He is married with four children.",
+    ],
+  },
+  {
+    name: "Nana Owoahene Akyeampong II",
+    role: "Former Deputy Minister for Food & Agriculture; Head of the Mpraeso-Kwahu Community, Accra",
+    image: owoaheneAkyeampongImage,
+    summary:
+      "Nana Owoahene Akyeampong II — popularly known as Hon. Mike Akyeampong — was born in 1945 at Ayalolo, Accra. A career agriculturalist and politician, he occupied the Afranie Stool of the Mpraeso-Kwahu Palace as Nana Sakyi Mireku III from 1984 to 1993, and has served as Head of the Mpraeso-Kwahu Community in Accra, Tema and environs since 2006.",
+    details: [
+      "He began his career in the civil service as a District Agriculture/Animal Husbandry Officer for the Mpraeso District (1973–1984) before becoming Manager of the Amrahia Dairy Farm/Project under the Ministry of Food and Agriculture (1984–1993). He served as Deputy Minister for Food and Agriculture, in charge of livestock and fisheries, from 1993 to 2001, and later as Board Chairman of Ghana's Fisheries Commission (2009–2014).",
+      "Internationally, he was elected Vice-Chairman (1997–1999) and then Chairman (1999–2001) of the Committee on Fisheries (COFI) at the UN Food and Agriculture Organisation in Rome — the only Ghanaian to have chaired COFI since its founding in 1966. He also served as Ghana's Governor at the 22nd Session of the Governing Council of the International Fund for Agricultural Development, and as Africa's representative on the first-ever Bureau of the International Whaling Commission.",
+      "He holds a BSc (Hons.) in Agriculture from the University of Ghana, postgraduate qualifications in animal science and dairy production from institutions in the Netherlands, Denmark, and Czech Republic, and an MBA from the Australian Institute of Business.",
+      "He was honoured with the Twentieth Century Award for Achievement in Fisheries by the International Biographical Centre, Cambridge, England, along with recognitions from the Kwahu Traditional Council, Mpraeso Senior High School, and Mpraeso Ahemmrono Kuo, among others.",
+    ],
+  },
+  {
+    name: "Effah Osei Bonsu David",
+    role: "Municipal Chief Executive (MCE), Kwahu South",
+    image: effahOseiBonsuDavidImage,
+    summary:
+      "Effah Osei Bonsu David hails from Twenedurase and trained as a teacher before entering public administration. He currently serves as the Municipal Chief Executive (MCE) for Kwahu South.",
+  },
+  {
+    name: "Dr. (Mrs.) Beatrice Wiafe Addai",
+    role: "President & Founder, Breast Care International; CEO, Peace and Love Hospitals",
+    image: beatriceWiafeAddaiImage,
+    summary:
+      "Dr. (Mrs.) Beatrice Wiafe Addai, MD, PhD is an internationally recognised, multiple award-winning breast cancer consultant working primarily in Ghana and across Africa, where breast cancer incidence is disproportionately high and many women lack access to the care they need. Her medical career spans over three decades, the last twenty-three of which have been devoted exclusively to breast cancer awareness, prevention, screening, diagnosis, treatment, research, rehabilitation, and palliative care.",
+    details: [
+      "She serves as Consultant and Surgeon in breast cancer management at the Peace and Love Hospitals in Accra and Kumasi, which she founded and developed into robust centres for the diagnosis, treatment, counselling, rehabilitation, and research into breast, prostate, and cervical cancer, hepatitis, hypertension, diabetes, and renal dialysis, among other conditions.",
+      "Recognising that ignorance and stigma around breast cancer can be more fatal to Ghanaian women than the disease itself — which is highly treatable with early diagnosis — she founded Breast Care International over twenty-three years ago, Ghana's only patient-driven, patient-centred NGO dedicated to breast cancer awareness, education, screening, counselling, and advocacy. It is today Ghana's leading breast cancer awareness charity, and as President of BCI America she has extended that work internationally.",
+      "She serves on numerous international and local boards, including as Chairperson of the Ghana Non-Communicable Diseases Alliance and the Ghana Cancer Board, a Medical Advisory Board member of Direct Relief USA, and a member of the Union for International Cancer Control, among many others.",
+      "Her honours include the Susan Bucklers' Excellence Award for Women in Science and Technology (USA), the Health and Excellence Award in Diamond Category (New York), the Africa International Award of Merit, the Women that Soar Award (Dallas), the Global Entrepreneur and Initiative Award (Houston), Ghana Woman of the Year Honors (Glitz, Accra), and the Distinguished African Ambassador Award from the Harvard Global Health Catalyst, among others.",
+      "She believes education, early detection, and prompt action are the best protection against breast cancer, and continues to lead free clinical screening drives for women in rural communities across Ghana.",
+    ],
+  },
+  {
+    name: "George Agyemang Sarpong",
+    role: "Founder/Partner, G.A. Sarpong & Co.; Former Director, Ghana School of Law",
+    image: georgeSarpongImage,
+    summary:
+      "George Agyemang Sarpong is a principal member of the Takyiman-Oyoko Abusua of Mpraeso and the Founder/Partner of G.A. Sarpong & Co., Legal Practitioners and Consultants, Accra. He is an alumnus of the Faculty of Law at the University of Ghana, the Ghana School of Law, the University of British Columbia, and the University of London's School of Oriental and African Studies.",
+    details: [
+      "He entered academia after a career in the Ghana Armed Forces, where he trained at the Ghana Military Academy and the Combat Arms School in Canada, was commissioned into the Recce Regiment in 1973, and honourably retired at the rank of Major in 1990.",
+      "He joined the Faculty of Law at the University of Ghana in 1990, was promoted to Senior Lecturer in 1996, and taught Public International Law, the Law of Contract, and Business and Environmental Law for 16 years before retiring voluntarily in 2006. He served as Director of the Ghana School of Law from 2009 to 2012, and has published extensively on international, environmental, and contract law.",
+      "He has served as legal consultant to the Government of Ghana, UN bodies, and international agencies, and has sat on numerous boards including the Governing Board of the Ghana Legal Aid Scheme, the African Agricultural Technology Foundation, the Kwahu Hospital Advisory Board, and the National Biosafety Authority. He is a member of the Ghana Bar and the International Union for Conservation of Nature, and is married with three children.",
+    ],
+  },
+  {
+    name: "Prof. Ebenezer Oduro Owusu",
+    role: "Vice-Chancellor, University of Ghana (2016–2021)",
+    image: ebenezerOduroOwusuImage,
+    summary:
+      "Prof. Ebenezer Oduro Owusu is a university administrator from Abetifi-Kwahu who served as Vice-Chancellor of the University of Ghana from August 2016 to July 2021, after holding several administrative positions at the university.",
+    details: [
+      "He was Chairman of the Cocoa Research Institute of Ghana (CRIG) Management Board from 2017 to 2020, and is the immediate past Board Chairman of Ghana's Energy Commission and immediate past President/Vice-Chancellor of the Presbyterian University, Ghana. He has served on numerous boards and councils in Ghana and abroad, and was a visiting researcher at the Natural Resources Institute, University of Greenwich, UK.",
+      "He holds a PhD in Science, an Executive MBA (Project Management option) from the University of Ghana Business School, and a Diploma in Educational Leadership from Harvard University.",
+      "In August 2008 he was decorated as a 'Living Legend' by the people of Kochi, Japan, for his contribution to science, and on 29 November 2017 he received the 'Rising Sun with Gold' honour from the Emperor of Japan, through the Japanese Cabinet, in recognition of his contributions to science and humanity. He is now retired and serves as a consultant to national and international organisations.",
+    ],
+  },
+  {
+    name: "Kingsley Young Opare",
+    role: "Project Management Consultant; Secretary, Kwahu Forum",
+    image: kingsleyYoungOpareImage,
+    summary:
+      "Kingsley Young Opare was born on 28 February 1969 to Mrs Elizabeth Asantewaa (Sasu) Opare of Mpraeso and Mr Kenneth Opare of Larteh, and is from the Agona clan of Mpraeso. He trained as a teacher at Presbyterian College of Education, Akropong-Akuapem, before going on to earn degrees in electrical/electronics engineering technology, educational administration, and business administration.",
+    details: [
+      "He has over 35 years of work experience spanning teaching, training, project and event coordination, monitoring and evaluation, and disaster management and emergency relief services. He currently works as a Project Management Consultant.",
+      "He holds key positions in several Kwahu associations, including Secretary of the Kwahu Forum, Executive Member of the Kwahu Development Association, member of the Kwahu Professional Network, former Public Relations Officer of Mpraesoman Kuo, and Administrator of the Kwahu Business Advocacy Association.",
+      "He initiated and led the Yenko Kwahu events in 2019 and 2020, supported by the Kwahu Professional Network in collaboration with the Kwahu Forum and the Ghana Tourism Authority, and was part of the Easter planning committee.",
     ],
   },
 ];
@@ -386,10 +482,6 @@ const prominentMembers = [
     name: "Nana Abra-Appiah",
     description: "Renowned Banker and Football Administrator",
   },
-  {
-    name: "Dr. Mrs. Beatrice Wiafe Addae",
-    description: "Breast Cancer Specialist",
-  },
   { name: "Mr. Adjare Danquah", description: "CEO of Metalex Group" },
   {
     name: "Emmanuel Agyei",
@@ -398,11 +490,6 @@ const prominentMembers = [
   {
     name: "Mrs. Justice Beatrice Agyeman-Dapaah",
     description: "Distinguished member of the judiciary",
-  },
-  {
-    name: "Hon. Mike Sakyi Akyeampong",
-    description:
-      "Former Chairman of the World Fisheries at the United Nations and Former Deputy Agriculture Minister of Ghana",
   },
   {
     name: "Mr. Bediako Amofo-Hene",
@@ -423,7 +510,6 @@ const prominentMembers = [
     name: "Lawyer Kwaku Baah",
     description: "Legal professional and community leader",
   },
-  { name: "Mr. Ernest Bediako", description: "CEO of Ernest Chemist" },
   {
     name: "Mr. Bediako Sarpong",
     description: "Pioneer Pharmaceuticals Sector Businessman",
@@ -457,22 +543,10 @@ const prominentMembers = [
     description: "CEO of Blackpark and Benkumhene of Mpraeso",
   },
   {
-    name: "Prof. Ebenezer Owusu Odoro",
-    description: "Former Deputy VC of the University of Ghana",
-  },
-  {
-    name: "Kingsley Young Opare",
-    description: "Prominent member of the Mpraeso community",
-  },
-  {
     name: "Oppong Sasu",
     description: "Former Director, Ghana Forestry Commission",
   },
   { name: "Justice Omari Sasu", description: "An Iconic Ghanaian Judge" },
-  {
-    name: "Lawyer George Sarpong",
-    description: "Former Director of the Ghana School of Law",
-  },
   {
     name: "Obaa Yaa Sefa",
     description: "Businesswoman",
@@ -530,10 +604,28 @@ export function ProminentMembersPage() {
 
   return (
     <div className="min-h-screen bg-[#faf8f5]">
-      <section className="bg-[#12210f]">
-        <div className="mx-auto grid max-w-7xl lg:grid-cols-[1fr_1.15fr]">
+      <section className="relative overflow-hidden bg-[#12210f] py-28 md:py-36">
+        {/* Stretched background photo + dark overlay */}
+        <div className="absolute inset-0">
+          <ImageWithFallback
+            src={sittingInState2}
+            alt="The Mpraesohene sitting in state at the Mpraeso Ahenfie"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#12210f]/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#12210f] via-[#12210f]/55 to-[#12210f]/75" />
+        </div>
+
+        {/* Watermark text */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
+          <span className="select-none whitespace-nowrap text-[20vw] font-extrabold uppercase leading-none tracking-tight text-white/[0.05]">
+            Mpraeso
+          </span>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="flex flex-col justify-center px-4 py-16 sm:px-6 lg:px-12 lg:py-24"
+            className="max-w-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -543,7 +635,7 @@ export function ProminentMembersPage() {
               Distinguished Citizens
             </p>
 
-            <h1 className="max-w-md text-4xl font-bold leading-[1.1] tracking-tight text-white md:text-5xl">
+            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white md:text-5xl">
               Prominent Members
             </h1>
 
@@ -552,15 +644,6 @@ export function ProminentMembersPage() {
               connected to Mpraeso.
             </p>
           </motion.div>
-
-          <div className="relative min-h-[260px] lg:min-h-[440px]">
-            <ImageWithFallback
-              src={prominentImage}
-              alt="Prominent Members of Mpraeso"
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#12210f]/90 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-[#12210f]/40" />
-          </div>
         </div>
       </section>
 

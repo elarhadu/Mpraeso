@@ -58,8 +58,7 @@ export function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                     <p className="text-gray-600">
-                      +233 XX XXX XXXX<br />
-                      +233 XX XXX XXXX
+                      +233 24 333 3902
                     </p>
                   </div>
                 </div>
