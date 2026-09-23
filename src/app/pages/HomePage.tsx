@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { Hero } from '../components/Hero';
 import { HeroTabs } from '../components/HeroTabs';
+import { Purpose } from '../components/Purpose';
 import { X } from 'lucide-react';
 import heroBgVideo from '../../assests/mpraeso_view_day.mp4';
 import nightVideo from '../../assests/mpraeso_view_night.mp4';
@@ -38,6 +39,7 @@ export function HomePage() {
     <>
       <Hero />
       <HeroTabs onVideoOpen={openPlayer} />
+      <Purpose />
 
       {/* Full-screen video player */}
       {showPlayer && (

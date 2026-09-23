@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { CONTACT, mailtoLink, whatsappLink } from '../lib/contact';
 
 export function Footer() {
   return (
@@ -49,51 +50,37 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-gray-400">
                 <Phone size={16} className="flex-shrink-0 text-[#d4a574]" />
-                <span>+233 24 333 3902</span>
+                <span>{CONTACT.phoneDisplay}</span>
               </li>
               <li className="flex items-center gap-2 text-gray-400">
                 <Mail size={16} className="flex-shrink-0 text-[#d4a574]" />
-                <span>info@mpraesocommunity.org</span>
+                <a href={`mailto:${CONTACT.email}`} className="hover:text-[#d4a574] transition-colors">{CONTACT.email}</a>
               </li>
             </ul>
           </div>
 
-          {/* Social Media */}
+          {/* Get Involved */}
           <div>
-            <h3 className="font-semibold mb-4">Follow Us</h3>
-            <p className="text-gray-400 text-sm mb-4">
-              Stay connected through our social media channels
-            </p>
-            <div className="flex gap-3">
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-[#3a6b35] rounded-full flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-[#3a6b35] rounded-full flex items-center justify-center transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-[#3a6b35] rounded-full flex items-center justify-center transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-[#3a6b35] rounded-full flex items-center justify-center transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={20} />
-              </a>
-            </div>
+            <h3 className="font-semibold mb-4">Get Involved</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href={whatsappLink('Hello, I would like to join the Mpraeso Diaspora Network.')} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#d4a574] transition-colors">
+                  Join the Diaspora Network
+                </a>
+              </li>
+              <li><Link to="/community" className="text-gray-400 hover:text-[#d4a574] transition-colors">Support a Project</Link></li>
+              <li>
+                <a href={mailtoLink('Business listing request')} className="text-gray-400 hover:text-[#d4a574] transition-colors">
+                  List Your Business
+                </a>
+              </li>
+              <li><Link to="/investment-opportunities" className="text-gray-400 hover:text-[#d4a574] transition-colors">Invest in Mpraeso</Link></li>
+              <li>
+                <a href={mailtoLink('Sharing a story or photograph of Mpraeso')} className="text-gray-400 hover:text-[#d4a574] transition-colors">
+                  Share a Story or Old Photograph
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -118,17 +105,6 @@ export function Footer() {
             <p>
               &copy; {new Date().getFullYear()} Mpraeso Community. All rights reserved.
             </p>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-[#d4a574] transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-[#d4a574] transition-colors">
-                Terms of Use
-              </a>
-              <a href="#" className="hover:text-[#d4a574] transition-colors">
-                Sitemap
-              </a>
-            </div>
           </div>
         </div>
       </div>

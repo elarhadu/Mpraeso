@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { GraduationCap, Wheat, Factory, Building2, Hammer } from "lucide-react";
+import { Link } from "react-router";
+import { mailtoLink } from "../lib/contact";
 
 const sectors = [
   {
@@ -233,12 +235,23 @@ export function InvestmentPage() {
               to discuss land availability, partnership structures, and how the traditional
               authority can support your investment.
             </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-[#d4a574] px-8 py-4 text-base font-bold text-gray-900 transition hover:bg-[#c89560]"
-            >
-              Get in Touch
-            </a>
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href={mailtoLink(
+                  'Investment interest',
+                  'Name:\nOrganisation:\nSector of interest:\nIndicative investment size:\nPhone / email:\nAny questions for the traditional authority:\n',
+                )}
+                className="inline-flex items-center gap-2 rounded-full bg-[#d4a574] px-8 py-4 text-base font-bold text-gray-900 transition hover:bg-[#c89560]"
+              >
+                Register Your Interest
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-white/40 px-8 py-4 text-base font-bold text-white transition hover:bg-white/10"
+              >
+                Other Enquiries
+              </Link>
+            </div>
           </div>
         </div>
       </section>

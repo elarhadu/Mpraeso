@@ -291,6 +291,38 @@ export function AboutPage() {
               commerce, and good governance.
             </p>
           </motion.div>
+
+          <motion.div
+            className="rounded-3xl bg-[#faf8f5] p-8 ring-1 ring-gray-200 md:p-10"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="mb-4 inline-block rounded-full bg-[#d4a574]/20 px-4 py-2 text-sm font-semibold text-[#8b6f47]">
+              Our Goal
+            </span>
+            <p className="text-xl leading-relaxed text-gray-700">
+              To ensure that wherever our people live, they can remain connected
+              to home, informed about what is happening, proud of where they come
+              from, and empowered to play a meaningful role in its future.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="rounded-3xl bg-[#142413] p-8 text-white md:p-10"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="mb-4 inline-block rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-[#d4a574]">
+              Our Promise
+            </span>
+            <p className="text-xl leading-relaxed">
+              We will strive to make this a trusted, inclusive and credible
+              platform where our community's history is preserved, opportunities
+              are shared, development is promoted, and progress is visible.
+            </p>
+          </motion.div>
         </div>
       </section>
 

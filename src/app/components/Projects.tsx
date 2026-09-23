@@ -1,8 +1,31 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Building2, Droplet, GraduationCap, Heart, Users, X } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import { Building2, Droplet, FileText, GraduationCap, Heart, Users, X } from 'lucide-react';
+import { mailtoLink } from '../lib/contact';
 
-const projects = [
+// The transparency fields are optional: each one appears on the card only once the
+// traditional council / development committee has supplied a confirmed figure.
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  color: string;
+  status?: 'Proposed' | 'Underway' | 'Completed';
+  budget?: string; // e.g. 'GH₵ 250,000'
+  raised?: string;
+  fundingSource?: string;
+  lastUpdate?: string; // e.g. 'Foundation laid — August 2026'
+};
+
+const STATUS_STYLES: Record<NonNullable<Project['status']>, string> = {
+  Proposed: 'bg-white/10 text-white/70',
+  Underway: 'bg-[#d4a574]/20 text-[#d4a574]',
+  Completed: 'bg-[#3a6b35]/40 text-[#9fd49a]',
+};
+
+const projects: Project[] = [
   {
     id: 1,
     title: 'Community Water Project',
@@ -40,15 +63,13 @@ const projects = [
   },
 ];
 
-const generalDonation = {
+const generalDonation: Project = {
   id: 0,
   title: 'General Donation',
   description: 'Support the overall development of the Mpraeso community.',
   icon: Heart,
   color: '#3a6b35',
 };
-
-type Project = typeof projects[0];
 
 function DonateModal({ project, onClose }: { project: Project; onClose: () => void }) {
   return (
@@ -91,15 +112,17 @@ function DonateModal({ project, onClose }: { project: Project; onClose: () => vo
               <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gray-400">Account Name</p>
               <p className="font-semibold text-gray-900">Mpraeso Community Development Fund</p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gray-400">Bank</p>
-                <p className="font-semibold text-gray-900">GCB Bank</p>
-              </div>
-              <div>
-                <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gray-400">Account Number</p>
-                <p className="font-semibold text-gray-900">1234567890</p>
-              </div>
+            <div>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gray-400">Bank Transfer</p>
+              <p className="text-gray-700">
+                Bank details are shared on request.{' '}
+                <a
+                  href={mailtoLink(`Bank details for donation: ${project.title}`)}
+                  className="font-semibold text-[#3a6b35] underline"
+                >
+                  Request them by email
+                </a>
+              </p>
             </div>
             <div className="border-t border-gray-200 pt-4">
               <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-gray-400">Payment Reference</p>
@@ -117,7 +140,7 @@ function DonateModal({ project, onClose }: { project: Project; onClose: () => vo
           </div>
 
           <p className="mt-5 text-center text-xs text-gray-400">
-            For international transfers or further enquiries, contact us via the Connect page.
+            Every contribution is recorded against its project. Ask us for a report at any time.
           </p>
         </motion.div>
       </motion.div>
@@ -173,6 +196,14 @@ export function Projects() {
                     <Icon size={22} style={{ color: project.color }} />
                   </div>
 
+                  {project.status && (
+                    <span
+                      className={`mb-3 inline-block w-fit rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest ${STATUS_STYLES[project.status]}`}
+                    >
+                      {project.status}
+                    </span>
+                  )}
+
                   <div className="flex-1">
                     <h3 className="mb-2 text-sm font-bold leading-snug text-white">
                       {project.title}
@@ -180,6 +211,24 @@ export function Projects() {
                     <p className="text-xs leading-relaxed text-white/55">
                       {project.description}
                     </p>
+
+                    {(project.budget || project.raised || project.fundingSource || project.lastUpdate) && (
+                      <dl className="mt-4 space-y-1.5 border-t border-white/10 pt-3 text-xs">
+                        {[
+                          ['Budget', project.budget],
+                          ['Raised', project.raised],
+                          ['Funded by', project.fundingSource],
+                          ['Latest', project.lastUpdate],
+                        ]
+                          .filter(([, value]) => value)
+                          .map(([label, value]) => (
+                            <div key={label} className="flex justify-between gap-3">
+                              <dt className="text-white/40">{label}</dt>
+                              <dd className="text-right font-semibold text-white/80">{value}</dd>
+                            </div>
+                          ))}
+                      </dl>
+                    )}
                   </div>
 
                   <button
@@ -212,6 +261,33 @@ export function Projects() {
           >
             Donate Now
           </button>
+        </motion.div>
+
+        {/* Accountability */}
+        <motion.div
+          className="mt-6 flex flex-col gap-4 rounded-2xl border border-white/[0.12] bg-white/[0.04] px-6 py-5 sm:flex-row sm:items-center sm:justify-between"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.4 }}
+        >
+          <div className="flex items-start gap-3">
+            <FileText size={20} className="mt-0.5 shrink-0 text-[#d4a574]" />
+            <div>
+              <p className="font-bold text-white">How your contributions are accounted for</p>
+              <p className="mt-0.5 text-xs leading-relaxed text-white/55">
+                Donations are recorded against the project you choose. Project costs, funding
+                sources and progress will be published here as each project advances, and any
+                contributor may request a report.
+              </p>
+            </div>
+          </div>
+          <a
+            href={mailtoLink('Project report request', 'I would like a report on the following project:\n')}
+            className="shrink-0 rounded-full border border-[#d4a574]/60 px-6 py-2.5 text-center text-sm font-bold text-[#d4a574] transition hover:bg-[#d4a574] hover:text-gray-900"
+          >
+            Request a Project Report
+          </a>
         </motion.div>
       </div>
 

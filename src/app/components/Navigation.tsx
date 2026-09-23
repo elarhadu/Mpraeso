@@ -21,38 +21,46 @@ export function Navigation() {
   const primaryLinks: NavLink[] = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Help & Hotlines', href: '/help-hotlines' },
-    { name: 'Contact', href: '/contact' },
   ];
 
+  const contactLink: NavLink = { name: 'Contact', href: '/contact' };
+
+  // Organised around the site's four pillars: Connect – Preserve – Promote – Develop.
   const groupedLinks: NavGroup[] = [
     {
-      name: 'Leadership',
+      name: 'Connect',
+      links: [
+        { name: 'News & Events', href: '/news-events' },
+        { name: 'Diaspora', href: '/diaspora' },
+        { name: 'Local Government', href: '/local-government' },
+        { name: 'Help & Hotlines', href: '/help-hotlines' },
+      ],
+    },
+    {
+      name: 'Preserve',
       links: [
         { name: 'Traditional Authority', href: '/traditional-authority' },
-        { name: 'Local Government', href: '/local-government' },
         { name: 'Governance Archive', href: '/governance-archive' },
         { name: 'Prominent Members', href: '/prominent-members' },
         { name: 'Hall of Fame', href: '/hall-of-fame' },
-        { name: 'Ongoing Projects', href: '/community' },
-        { name: 'Diaspora', href: '/diaspora' },
+        { name: 'Gallery', href: '/gallery' },
       ],
     },
     {
-      name: 'Development',
+      name: 'Promote',
       links: [
         { name: 'Tourism', href: '/tourism' },
-        { name: 'Investment Opportunities', href: '/investment-opportunities' },
-        { name: 'Education', href: '/education' },
-        { name: 'Health', href: '/health' },
+        { name: 'Getting Here', href: '/directions' },
         { name: 'Business', href: '/business' },
+        { name: 'Education', href: '/education' },
       ],
     },
     {
-      name: 'Media',
+      name: 'Develop',
       links: [
-        { name: 'News & Events', href: '/news-events' },
-        { name: 'Gallery', href: '/gallery' },
+        { name: 'Ongoing Projects', href: '/community' },
+        { name: 'Investment Opportunities', href: '/investment-opportunities' },
+        { name: 'Health', href: '/health' },
       ],
     },
   ];
@@ -135,6 +143,17 @@ export function Navigation() {
                 </div>
               </div>
             ))}
+
+            <Link
+              to={contactLink.href}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                isActive(contactLink.href)
+                  ? 'bg-[#3a6b35]/10 text-[#3a6b35]'
+                  : 'text-gray-700 hover:bg-white/70 hover:text-[#3a6b35]'
+              }`}
+            >
+              {contactLink.name}
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -210,6 +229,18 @@ export function Navigation() {
                 )}
               </div>
             ))}
+
+            <Link
+              to={contactLink.href}
+              className={`mt-2 block py-3 px-2 rounded-md transition-colors ${
+                isActive(contactLink.href)
+                  ? 'text-[#3a6b35] bg-[#3a6b35]/5 font-semibold'
+                  : 'text-gray-700 hover:bg-white/70 hover:text-[#3a6b35]'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {contactLink.name}
+            </Link>
           </div>
         )}
       </div>

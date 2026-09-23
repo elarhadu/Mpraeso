@@ -1,7 +1,18 @@
+import type { FormEvent } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
+import { CONTACT, mailtoLink, whatsappLink } from '../lib/contact';
 
 export function ContactPage() {
+  // There is no backend yet, so the form hands the message to the visitor's email app.
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const name = `${data.get('firstName') ?? ''} ${data.get('lastName') ?? ''}`.trim();
+    const body = `${data.get('message') ?? ''}\n\n— ${name}\n${data.get('email') ?? ''}`;
+    window.location.href = mailtoLink(String(data.get('subject') || 'Message from the website'), body);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -58,7 +69,7 @@ export function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                     <p className="text-gray-600">
-                      +233 24 333 3902
+                      {CONTACT.phoneDisplay}
                     </p>
                   </div>
                 </div>
@@ -70,36 +81,26 @@ export function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <p className="text-gray-600">
-                      info@mpraeso.gov.gh<br />
-                      tourism@mpraeso.gov.gh
+                      <a href={`mailto:${CONTACT.email}`} className="hover:text-[#3a6b35]">
+                        {CONTACT.email}
+                      </a>
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Social Media */}
+              {/* WhatsApp */}
               <div className="mt-12">
-                <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
-                <div className="flex gap-4">
-                  <a
-                    href="#"
-                    className="w-12 h-12 bg-[#3a6b35] hover:bg-[#2d5016] rounded-lg flex items-center justify-center transition-colors"
-                  >
-                    <Facebook size={24} className="text-white" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-12 h-12 bg-[#3a6b35] hover:bg-[#2d5016] rounded-lg flex items-center justify-center transition-colors"
-                  >
-                    <Twitter size={24} className="text-white" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-12 h-12 bg-[#3a6b35] hover:bg-[#2d5016] rounded-lg flex items-center justify-center transition-colors"
-                  >
-                    <Instagram size={24} className="text-white" />
-                  </a>
-                </div>
+                <h3 className="font-semibold text-gray-900 mb-4">Prefer WhatsApp?</h3>
+                <a
+                  href={whatsappLink('Hello, I am reaching out from the Mpraeso Community website.')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-[#3a6b35] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#2d5016]"
+                >
+                  <MessageCircle size={20} />
+                  Chat with us on WhatsApp
+                </a>
               </div>
             </div>
 
@@ -108,7 +109,7 @@ export function ContactPage() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Send Us a Message
               </h3>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -117,6 +118,7 @@ export function ContactPage() {
                     <input
                       type="text"
                       id="firstName"
+                      name="firstName"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3a6b35] focus:border-transparent"
                       placeholder="John"
                     />
@@ -128,6 +130,7 @@ export function ContactPage() {
                     <input
                       type="text"
                       id="lastName"
+                      name="lastName"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3a6b35] focus:border-transparent"
                       placeholder="Doe"
                     />
@@ -141,6 +144,7 @@ export function ContactPage() {
                   <input
                     type="email"
                     id="email"
+                      name="email"
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3a6b35] focus:border-transparent"
                     placeholder="john@example.com"
                   />
@@ -153,6 +157,7 @@ export function ContactPage() {
                   <input
                     type="text"
                     id="subject"
+                      name="subject"
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3a6b35] focus:border-transparent"
                     placeholder="How can we help?"
                   />
@@ -164,6 +169,8 @@ export function ContactPage() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
+                    required
                     rows={6}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#3a6b35] focus:border-transparent resize-none"
                     placeholder="Your message..."

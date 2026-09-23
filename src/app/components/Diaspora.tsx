@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Globe, Users, Heart, ArrowRight } from 'lucide-react';
+import { whatsappLink } from '../lib/contact';
 
 export function Diaspora() {
   return (
@@ -48,9 +49,16 @@ export function Diaspora() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#d4a574] hover:bg-[#c89560] text-gray-900 px-8 py-3 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
-                Register Now <ArrowRight size={20} />
-              </button>
+              <a
+                href={whatsappLink(
+                  'Hello, I would like to join the Mpraeso Diaspora Network.\nName:\nCity/Country:\nFamily/House in Mpraeso:',
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#d4a574] hover:bg-[#c89560] text-gray-900 px-8 py-3 rounded-lg transition-colors inline-flex items-center justify-center gap-2"
+              >
+                Register on WhatsApp <ArrowRight size={20} />
+              </a>
               {/* Learn More — hidden until diaspora page is ready */}
             </div>
           </div>

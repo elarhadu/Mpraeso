@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { GraduationCap, BookOpen, Award, School } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { ContributeBanner } from '../components/ContributeBanner';
+import { mailtoLink } from '../lib/contact';
 
 export function EducationPage() {
   return (
@@ -75,6 +77,30 @@ export function EducationPage() {
           </div>
         </div>
       </section>
+
+      <ContributeBanner
+        eyebrow="Help Build This Page"
+        title="Support the next generation of Mpraeso"
+        text="We are gathering details of our schools, scholarships, mentors and the achievements of our young people. Whether you run a school, fund a scholarship, want to mentor a student, or know a young person whose success deserves celebrating — tell us and we will feature it here."
+        actions={[
+          {
+            label: 'Offer to Mentor',
+            href: mailtoLink('Mentorship offer', 'Name:\nProfession:\nHow I would like to help:\n'),
+          },
+          {
+            label: 'Share a Scholarship',
+            href: mailtoLink('Scholarship information', 'Scholarship name:\nWho it is for:\nHow to apply:\nContact:\n'),
+          },
+          {
+            label: 'Add a School',
+            href: mailtoLink('School information', 'School name:\nLevel (basic / secondary / tertiary):\nLocation:\nContact:\n'),
+          },
+          {
+            label: 'Celebrate a Young Achiever',
+            href: mailtoLink('Young achiever nomination', 'Name:\nAchievement:\nContact:\n'),
+          },
+        ]}
+      />
     </div>
   );
 }

@@ -1,8 +1,20 @@
+import type { FormEvent } from 'react';
 import { motion } from 'motion/react';
 import { News } from '../components/News';
 import { Events } from '../components/Events';
+import { mailtoLink } from '../lib/contact';
 
 export function NewsEventsPage() {
+  // No mailing service yet — the request goes to the community inbox to be added by hand.
+  const handleSubscribe = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const email = new FormData(e.currentTarget).get('email');
+    window.location.href = mailtoLink(
+      'Newsletter subscription',
+      `Please add ${email} to the Mpraeso community updates list.`,
+    );
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -42,16 +54,24 @@ export function NewsEventsPage() {
           <p className="text-xl text-white/90 mb-8">
             Subscribe to our newsletter for the latest news, events, and community updates delivered to your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <form
+            onSubmit={handleSubscribe}
+            className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto"
+          >
             <input
               type="email"
+              name="email"
+              required
               placeholder="Enter your email"
               className="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#d4a574]"
             />
-            <button className="bg-[#d4a574] hover:bg-[#c89560] text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors">
+            <button
+              type="submit"
+              className="bg-[#d4a574] hover:bg-[#c89560] text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors"
+            >
               Subscribe
             </button>
-          </div>
+          </form>
           <p className="text-white/70 text-sm mt-4">
             We respect your privacy. Unsubscribe at any time.
           </p>

@@ -102,18 +102,18 @@ const chiefProfiles: ChiefProfile[] = [
     ],
   },
   {
-    name: "Nana Obenewaa",
+    name: "Nana Obenewaa Ofori Attah",
     title: "Benkumhene of Mpraeso",
     image: "/gallery/img-067-3a83339a-44b7-487e-97a5-98e44cd6e5cd.png",
     enstooled: "7 April 2025",
-    focus: "Dispute resolution, inclusive governance, and education",
+    focus: "Education, entrepreneurship, mentorship, and community development",
     summary:
-      "Nana Obenewaa brings an inclusive and development-focused perspective to traditional leadership in Mpraeso. She is the second female chief enstooled by Nana Ampadu Daaduam III, a historic step cementing women's place in the traditional council.",
+      "Nana Obenewaa Ofori Attah, known in private life as Patience Attah Prempeh, is the Benkumhene of Mpraeso. A traditional leader and entrepreneur, she is the Founder and CEO of Black Park Group, with over three decades of experience in the furniture and interior solutions industry.",
     details: [
-      "Her enstoolment as Benkumhene followed the trailblazing example set by Nana Krobea Asante (Adontenhene), further affirming the Paramount Chief's commitment to female representation in traditional leadership.",
-      "Advocates culturally grounded dispute resolution and social trust within the community.",
-      "Supports participatory decision-making and inclusive governance at the traditional level.",
-      "Believes education is central to long-term development and actively promotes it within her role.",
+      "She is the second female chief enstooled by Nana Ampadu Daaduam III. Her enstoolment as Benkumhene followed the trailblazing example set by Nana Krobea Asante (Adontenhene), further affirming the Paramount Chief's commitment to female representation in traditional leadership.",
+      "As Founder and CEO of Black Park Group, she has built over three decades of experience in the furniture and interior solutions industry, bringing proven business leadership to her traditional role.",
+      "She is passionate about business development, leadership, and mentorship, and brings these strengths to her service in the traditional council.",
+      "She is committed to giving back to her hometown through initiatives that promote education, entrepreneurship, and community development in Mpraeso.",
     ],
   },
   {

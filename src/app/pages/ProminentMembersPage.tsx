@@ -539,8 +539,8 @@ const prominentMembers = [
     description: "Former Member of Parliament and Former Deputy Eastern Regional Minister",
   },
   {
-    name: "Nana Obenewaa",
-    description: "CEO of Blackpark and Benkumhene of Mpraeso",
+    name: "Nana Obenewaa Ofori Attah",
+    description: "Founder and CEO of Black Park Group and Benkumhene of Mpraeso",
   },
   {
     name: "Oppong Sasu",

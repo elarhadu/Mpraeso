@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { Briefcase, TrendingUp, MapPin } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { ContributeBanner } from '../components/ContributeBanner';
+import { mailtoLink } from '../lib/contact';
 
 export function BusinessPage() {
   return (
@@ -74,6 +76,22 @@ export function BusinessPage() {
           </div>
         </div>
       </section>
+
+      <ContributeBanner
+        eyebrow="Business Directory"
+        title="Own a business with Mpraeso roots?"
+        text="We are building a directory of businesses and professionals from Mpraeso — at home, across Ghana and in the diaspora — so our people can find, use and partner with one another. Listing is free."
+        actions={[
+          {
+            label: 'List Your Business',
+            href: mailtoLink(
+              'Business listing request',
+              'Business name:\nOwner:\nSector / services:\nLocation:\nPhone / email / website:\nConnection to Mpraeso:\n',
+            ),
+          },
+          { label: 'See Investment Opportunities', href: '/investment-opportunities' },
+        ]}
+      />
     </div>
   );
 }
